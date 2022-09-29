@@ -1,5 +1,4 @@
 package Model;
-
 public class Node<T> {
     private T item;
     Node<T>[] neighbours; //Package accessibility
