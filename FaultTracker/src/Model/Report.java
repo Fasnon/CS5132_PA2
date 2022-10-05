@@ -7,11 +7,20 @@ public class Report implements Comparable<Report> {
     private String title;
     private String description;
     private String contact;
+    private String location;
     private int urgency;
     private int severity;
 
     public String getType() {
         return type;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public void setType(String type) {
