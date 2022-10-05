@@ -4,14 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="implement Report class (by notmeegoreng)">
+    <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="impt">
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-SemiBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/images/nea_logo_real.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/StartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/Start.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/FaultTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/FaultTracker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/ReportFaultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Controller/ReportFaultController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Model/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/ReportFaultController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/SignIn.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/ReportFaultController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/SignIn.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +70,11 @@
       <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker\src" />
       <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker\resources\fonts" />
+      <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker\resources\images" />
+      <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker\resources\styles" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -99,7 +117,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664509729806</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added new dependency">
+      <created>1664650261912</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664650261912</updated>
+    </task>
+    <task id="LOCAL-00005" summary="impt">
+      <created>1664932574087</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664932574087</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +148,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="implement Report class (by notmeegoreng)" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement Report class (by notmeegoreng)" />
+    <MESSAGE value="added new dependency" />
+    <MESSAGE value="impt" />
+    <option name="LAST_COMMIT_MESSAGE" value="impt" />
   </component>
 </project>

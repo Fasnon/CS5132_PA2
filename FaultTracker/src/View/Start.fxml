@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane fx:id="header" minHeight="240.0" minWidth="1080.0" prefHeight="139.0" prefWidth="600.0" styleClass="header-bg">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="53.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../FaultTracker/resources/images/nea_logo_real.png" />
+               </image></ImageView>
+            <Label layoutX="254.0" layoutY="36.0" prefHeight="135.0" prefWidth="220.0" styleClass="logo-text" text="National Environmental Agency" textFill="WHITE" wrapText="true">
+                 <stylesheets>
+                    <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+                 </stylesheets>>
+            </Label>
+            <Label layoutX="254.0" layoutY="172.0"  text="Safeguard, Nurture, Cherish" styleClass="logo-motto" textFill="#FFCA42">
+                <stylesheets>
+                    <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+                 </stylesheets>
+            </Label>
+         </children>
+         </AnchorPane>
+   </children>
+</AnchorPane>
