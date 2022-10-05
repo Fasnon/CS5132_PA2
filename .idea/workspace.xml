@@ -5,26 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="impt">
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/images/nea_logo_real.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/StartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/Start.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/ReportFaultController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/SignIn.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/ReportFaultController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/SignIn.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Model/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Model/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Model/RBTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Model/RBTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "18",
-    "last_opened_file_path": "C:/Users/TanKa/IdeaProjects/CS5132_PA/FaultTracker/src",
+    "last_opened_file_path": "C:/Users/ASUS/IdeaProjects/CS5132 Labs",
     "project.structure.last.edited": "Global Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
