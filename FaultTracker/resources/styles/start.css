@@ -1,0 +1,18 @@
+@font-face {
+    src: url('../fonts/Arimo-SemiBold.ttf');
+}
+
+.header-bg{
+    -fx-background-color: linear-gradient(to right, #75B649 50%, #BED73D);
+}
+
+.logo-text{
+    -fx-font-family: "Arimo SemiBold";
+    -fx-font-size: 30;
+    -fx-line-spacing: 3;
+}
+
+.logo-motto{
+    -fx-font-family: "Arimo SemiBold";
+    -fx-font-size: 16;
+}
