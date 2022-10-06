@@ -1,23 +1,25 @@
 package Model;
-public class Node<T> {
+public class RBNode<T> {
     private T item;
     // Package accessibility
-    Node<T> left;
-    Node<T> right;
+    boolean black;
+    RBNode<T> left;
+    RBNode<T> right;
 
-    public Node(T item){
+    public RBNode(T item, boolean black){
         this.item = item;
+        this.black = black;
     }
 
-    public Node(T item, Node<T> left, Node<T> right){
-        this(item);
+    public RBNode(T item, boolean black, RBNode<T> left, RBNode<T> right){
+        this(item, black);
         this.left = left;
         this.right = right;
     }
 
     // Copy constructor to copy the Node object n
-    public Node(Node<T> n){
-        this(n.item, n.left, n.right);
+    public RBNode(RBNode<T> n){
+        this(n.item, n.black, n.left, n.right);
     }
 
     // Accessor method returns item stored in Node
