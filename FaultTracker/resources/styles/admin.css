@@ -9,6 +9,9 @@
 @font-face {
     src: url('../fonts/Arimo-Medium.ttf');
 }
+@font-face {
+    src: url('../fonts/Arimo-Bold.ttf');
+}
 
 .header-bg{
     -fx-background-color: linear-gradient(to right, #75B649 50%, #BED73D);
@@ -16,14 +19,14 @@
 
 .logo-text{
     -fx-font-family: "Arimo SemiBold";
-    -fx-font-size: 30;
-    -fx-line-spacing: 3;
+    -fx-font-size: 26;
+    -fx-line-spacing: 2;
     -fx-text-fill: "#FFFFFF";
 }
 
 .logo-motto{
     -fx-font-family: "Arimo SemiBold";
-    -fx-font-size: 16;
+    -fx-font-size: 13;
     -fx-text-fill: "#FFCA42";
 }
 
@@ -73,4 +76,10 @@
 .field-header{
     -fx-font-family: "Arimo Medium";
     -fx-font-size: 15;
+}
+
+.app-text{
+    -fx-font-family: "Arimo Bold";
+    -fx-font-size: 36;
+    -fx-text-fill: "#726127";
 }
