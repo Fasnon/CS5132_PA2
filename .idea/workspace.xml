@@ -4,7 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="Add functionality for all buttons&#10;Started work on grid/card view" />
+    <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="Add functionality for all buttons&#10;Started work on grid/card view">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_10_2022_1_33_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_10_2022_1_33_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_6_2022_11_47_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_6_2022_11_47_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_30_2022_11_40_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_30_2022_11_40_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/resources/styles/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/CaseTypeCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/CaseTypeCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/CaseTypeCard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/CaseTypeCard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/CaseView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/CaseView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Confirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Confirmation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/StepOne.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/StepOne.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/StepThree.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/StepThree.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/StepTwo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/StepTwo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Data/reports.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/FaultTracker.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/RBTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Model/RBTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/StepOne.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/StepOne.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/fonts/Arimo-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/fonts/Arimo-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/fonts/Arimo-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/fonts/Arimo-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/fonts/Arimo-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/fonts/Arimo-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/fonts/Arimo-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/fonts/Arimo-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/images/nea_logo_real.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/styles/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/styles/start.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/resources/styles/steps.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/Controller/StartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/Model/RBNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/Model/RBTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/Model/Report.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/View/Admin.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/View/CaseView.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/View/Confirmation.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/View/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/View/Start.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/View/StepOne.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/View/StepThree.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/View/StepTwo.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/src/module-info.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,22 +73,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Vernon Pui/Documents/GitHub/CS5132_PA2&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/TanKa/IdeaProjects/FaultTracker",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker\src" />

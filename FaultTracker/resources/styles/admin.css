@@ -83,3 +83,8 @@
     -fx-font-size: 36;
     -fx-text-fill: "#726127";
 }
+
+.toggle-panel{
+    -fx-background-color: "#E1F2B1";
+    -fx-background-radius: 16;
+}
