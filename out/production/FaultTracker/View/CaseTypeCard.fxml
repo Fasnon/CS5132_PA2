@@ -4,9 +4,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="120.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CaseTypeCardController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" onMousePressed="#click" minWidth="-Infinity" prefHeight="140.0" prefWidth="110.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CaseTypeCardController">
    <children>
-      <ImageView fx:id="typeImg" fitHeight="64.0" fitWidth="64.0" layoutX="26.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="typeLbl" layoutX="26.0" layoutY="109.0" text="Report Type" />
+      <ImageView fx:id="typeImg" fitHeight="64.0" fitWidth="64.0" layoutX="26.0" layoutY="21.0"  pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="typeLbl" alignment="CENTER" layoutY="109.0" prefHeight="17.0" prefWidth="110.0" text="Report Type" />
    </children>
 </AnchorPane>

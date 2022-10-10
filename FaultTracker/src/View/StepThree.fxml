@@ -63,12 +63,12 @@
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Label>
-      <Button fx:id="backBtn" layoutX="246.0" layoutY="496.0" mnemonicParsing="false" onAction="#formBack" prefHeight="30.0" prefWidth="72.0" styleClass="button" text="Back">
+      <Button fx:id="backBtn" layoutX="246.0"  layoutY="560.0"  mnemonicParsing="false" onAction="#formBack" prefHeight="30.0" prefWidth="72.0" styleClass="button" text="Back">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>
       </Button>
-      <Button fx:id="proceedBtn" layoutX="866.0" layoutY="496.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="30.0" prefWidth="88.0" styleClass="button" text="Confirm">
+      <Button fx:id="proceedBtn" layoutX="866.0"  layoutY="560.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="30.0" prefWidth="88.0" styleClass="button" text="Confirm">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>

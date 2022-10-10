@@ -88,3 +88,8 @@
     -fx-background-color: "#E1F2B1";
     -fx-background-radius: 16;
 }
+
+.toggle-panel-header{
+    -fx-font-family: "Arimo SemiBold";
+    -fx-font-size: 17;
+}

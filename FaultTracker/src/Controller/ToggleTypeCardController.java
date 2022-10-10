@@ -1,5 +1,6 @@
 package Controller;
 import View.StepOneListener;
+import View.ToggleListener;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.Label;
@@ -15,7 +16,7 @@ import javafx.scene.paint.Paint;
 
 import java.io.File;
 
-public class CaseTypeCardController {
+public class ToggleTypeCardController {
 
     @FXML
     private AnchorPane anchorPane;
@@ -24,14 +25,13 @@ public class CaseTypeCardController {
     @FXML
     private Label typeLbl;
 
-
     private String type;
 
     private String colour;
 
     private boolean state = false ;
 
-    private StepOneListener stepOneListener;
+    private ToggleListener toggleListener;
 
     public String getType(){
         return type;
@@ -44,18 +44,27 @@ public class CaseTypeCardController {
         typeImg.setImage(new Image(s.toURI().toString()));;
     }
 
-    @FXML
-    private void click(MouseEvent e){
-        stepOneListener.onClickListener(type);
+    public void select(){
         state = true;
-        anchorPane.setStyle("-fx-background-color: \"" + colour +"\"; -fx-background-radius: 20;");
+        anchorPane.setStyle("-fx-background-color: \"" + colour + "\"; -fx-background-radius: 20;");
         File s = new File("FaultTracker/resources/images/selected_" + type.toLowerCase() + ".png");
         typeImg.setImage(new Image(s.toURI().toString()));;
     }
 
-    public void setData(String type, StepOneListener sol){
+    @FXML
+    private void click(MouseEvent e){
+        toggleListener.onClickListener(type);
+        if (state) {
+            deselect();
+        }
+        else{
+            select();
+        }
+    }
+
+    public void setData(String type, ToggleListener tl){
         this.type = type;
-        this.stepOneListener = sol;
+        this.toggleListener = tl;
         typeLbl.setText(type);
         switch (type){
             case "Compliments": {

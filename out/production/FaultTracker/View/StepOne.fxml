@@ -87,5 +87,10 @@
           <RowConstraints maxHeight="202.00001017252603" minHeight="10.0" prefHeight="120.99997965494792" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
+      <Label layoutX="135.0" layoutY="226.0" text="Select a case type:" styleClass="section-header" >
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
    </children>
 </AnchorPane>

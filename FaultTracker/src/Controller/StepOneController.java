@@ -1,10 +1,12 @@
 package Controller;
 
+import View.StepOneListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
@@ -28,6 +30,11 @@ public class StepOneController implements Initializable {
     @FXML
     private Button proceedBtn;
 
+    private String selectedType = "nil";
+
+    private StepOneListener stepOneListener;
+    private ArrayList<CaseTypeCardController> cards;
+
     @FXML
     void formBack(ActionEvent event) throws Exception {
         Stage primaryStage = (Stage) backBtn.getScene().getWindow();
@@ -37,9 +44,18 @@ public class StepOneController implements Initializable {
 
     @FXML
     void formProceed(ActionEvent event) throws Exception{
-        Stage primaryStage = (Stage) backBtn.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/View/StepTwo.fxml")));
-        primaryStage.getScene().setRoot(newRoot);
+        if (selectedType != "nil") {
+            Stage primaryStage = (Stage) backBtn.getScene().getWindow();
+            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/View/StepTwo.fxml")));
+            primaryStage.getScene().setRoot(newRoot);
+            primaryStage.setUserData(selectedType);
+        }
+        else{
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setHeaderText("Select a report type");
+            a.setContentText("Please select a report type by clicking on it");
+            a.showAndWait();
+        }
 
     }
 
@@ -47,12 +63,25 @@ public class StepOneController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             ArrayList<String> types = new ArrayList<>();
+            cards = new ArrayList<CaseTypeCardController>();
             types.add("Compliments");
             types.add("Smoking");
             types.add("Rodents");
             types.add("Littering");
             types.add("Mosquitoes");
             types.add("Others");
+            stepOneListener = new StepOneListener() {
+                @Override
+                public void onClickListener(String type) {
+                    selectedType = type;
+                    for (int i = 0; i < cards.size(); i++){
+                        if (!cards.get(i).getType().equals(selectedType)){
+                            cards.get(i).deselect();
+                        }
+                    }
+                    System.out.println(type);
+                }
+            };
 
             int column = 0;
             int row = 0;
@@ -64,7 +93,8 @@ public class StepOneController implements Initializable {
                 AnchorPane anchorPane = fxmlLoader.load();
 
                 CaseTypeCardController caseTypeCardController = fxmlLoader.getController();
-                caseTypeCardController.setData(types.get(i));
+                caseTypeCardController.setData(types.get(i), stepOneListener);
+                cards.add(caseTypeCardController);
 
                 if(column == 3){
                     column = 0;
@@ -72,6 +102,7 @@ public class StepOneController implements Initializable {
                 }
 
                 grid.add(anchorPane, column++, row);
+//                cards.add(anchorPane);
 
             }
             grid.setSnapToPixel(false);

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="120.0" prefWidth="112.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToggleTypeCardController">
+   <children>
+      <ImageView fx:id="typeImg" fitHeight="64.0" fitWidth="64.0" layoutX="16.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="typeLbl" alignment="CENTER" layoutY="88.0" prefHeight="17.0" prefWidth="112.0" text="Report Type" />
+   </children>
+</AnchorPane>
