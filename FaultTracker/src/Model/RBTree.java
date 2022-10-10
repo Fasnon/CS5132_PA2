@@ -57,7 +57,17 @@ public class RBTree<T extends Comparable<? super T>> {
         }
         insert(item, root);
     }
+    public void delete(T item){
+        if(root == null)
+            return;
+        delete(item, root);
 
+    }
+    public void delete(T item, RBNode<T> curr){
+
+
+
+    }
     private void insert(T item, RBNode<T> curr) {
         // Complete the recursive code for insertion below this comment
         int c = item.compareTo(curr.getItem());

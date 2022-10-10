@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="added font, logo and relevant styles&#10;finished the header on start page">
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/admin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/steps.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/Admin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/CaseView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/Confirmation.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/StepOne.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/StepThree.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/StepTwo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/StartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/AboutTab.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Start.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Start.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/AboutTab.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Model/RBTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Model/RBTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,22 +32,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/IdeaProjects/CS5132 Labs&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/Vernon Pui/Documents/GitHub/CS5132_PA2",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker\src" />
@@ -74,7 +60,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="View.Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="View.Main" />
