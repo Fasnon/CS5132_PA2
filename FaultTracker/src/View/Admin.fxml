@@ -74,7 +74,10 @@
             </Label>
          </children>
       </AnchorPane>
-      <TableView layoutX="365.0" layoutY="230.0" prefHeight="353.0" prefWidth="635.0">
+      <TableView layoutX="365.0" layoutY="230.0" prefHeight="353.0" prefWidth="635.0" styleClass="table-view">
+          <stylesheets>
+             <URL value="@../../../../FaultTracker/resources/styles/admin.css" />
+          </stylesheets>>
         <columns>
           <TableColumn prefWidth="108.0" text="Report Type" />
           <TableColumn prefWidth="239.33331298828125" text="Title" />
