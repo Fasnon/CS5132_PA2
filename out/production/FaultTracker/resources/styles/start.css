@@ -1,0 +1,76 @@
+@font-face {
+    src: url('../fonts/Arimo-SemiBold.ttf');
+}
+
+@font-face {
+    src: url('../fonts/Arimo-Regular.ttf');
+}
+
+@font-face {
+    src: url('../fonts/Arimo-Medium.ttf');
+}
+
+.header-bg{
+    -fx-background-color: linear-gradient(to right, #75B649 50%, #BED73D);
+}
+
+.logo-text{
+    -fx-font-family: "Arimo SemiBold";
+    -fx-font-size: 30;
+    -fx-line-spacing: 3;
+    -fx-text-fill: "#FFFFFF";
+}
+
+.logo-motto{
+    -fx-font-family: "Arimo SemiBold";
+    -fx-font-size: 16;
+    -fx-text-fill: "#FFCA42";
+}
+
+.desc-title{
+    -fx-font-family: "Arimo SemiBold";
+    -fx-font-size: 22;
+    -fx-text-fill: "#333333";
+}
+
+.desc-text{
+    -fx-font-family: "Arimo Regular";
+    -fx-font-size: 16;
+    -fx-text-fill: "#666666";
+}
+
+.button{
+    -fx-background-color:  "#FFFFFF";
+    -fx-text-fill: "#000000";
+    -fx-font-family: "Arimo Regular";
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: "#000000";
+    -fx-border-width: 0.33;
+    -fx-padding: 5 20 5 15;
+}
+
+.button:hover{
+    -fx-background-color:  "#cdcdcd";
+}
+
+.button:pressed{
+    -fx-background-color:  "#a5a5a5";
+    -fx-background-insets: 3 0 3 0;
+    -fx-border-insets: 3 0 3 0;
+ }
+
+.text-field {
+    -fx-background-color: "#dddddd";
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.text-field:focused {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+.field-header{
+    -fx-font-family: "Arimo Medium";
+    -fx-font-size: 15;
+}
