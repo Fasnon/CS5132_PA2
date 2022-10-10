@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StartController">
+   <children>
+      <AnchorPane fx:id="header" minHeight="220.0" minWidth="1080.0" prefHeight="139.0" prefWidth="600.0" styleClass="header-bg">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="53.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../FaultTracker/resources/images/nea_logo_real.png" />
+               </image></ImageView>
+            <Label layoutX="258.0" layoutY="30.0" prefHeight="135.0" prefWidth="220.0" styleClass="logo-text" text="National Environmental Agency" wrapText="true">
+                 <stylesheets>
+                    <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+                 </stylesheets>>
+            </Label>
+            <Label layoutX="258.0" layoutY="166.0" styleClass="logo-motto" text="Safeguard, Nurture, Cherish">
+                <stylesheets>
+                    <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+                 </stylesheets>
+            </Label>
+         </children>
+         </AnchorPane>
+      <Label layoutX="56.0" layoutY="260.0" styleClass="desc-title" text="Efficient Feedback and Enquiry System ">
+        <stylesheets>
+          <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+       </stylesheets>
+      </Label>
+      <Label layoutX="720.0" layoutY="260.0" styleClass="desc-title" text="I'm an officer">
+          <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+        </Label>
+      <Line endX="440.0" endY="288.0" layoutX="246.0" layoutY="331.0" startX="440.0" startY="-80.0" />
+      <Label layoutX="56.0" layoutY="310.0" prefWidth="560.0" styleClass="desc-text" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis ut dolor nec. Gravida vel scelerisque urna, sem consectetur eu. Quis id dui ultrices id risus. In fermentum lectus lectus id viverra. Scelerisque faucibus suspendisse nisi, adipiscing turpis. Fermentum, morbi gravida varius odio ut augue. &#13; &#13;Nisl interdum vel viverra sed porttitor sollicitudin quam. Tellus vulputate sagittis vulputate nec suscipit ac pellentesque in sed. Senectus hac massa gravida mauris, ut. Aenean odio tortor lorem feugiat nulla adipiscing quam. Et sit aenean non facilisis at massa in. Lacus, duis neque a, laoreet fringilla etiam nullam dolor. Facilisis eros, non nulla senectus aliquam arcu a ultrices." wrapText="true" />
+      <Button fx:id="formBtn" layoutX="470.0" layoutY="570.0" mnemonicParsing="false" onAction="#formProceed" styleClass="button" text="I agree, let’s proceed!">
+           <stylesheets>
+             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+          </stylesheets>
+         </Button>
+      <Button fx:id="signinBtn" layoutX="962.0" layoutY="570.0" mnemonicParsing="false" onAction="#adminLogIn" styleClass="button" text="Log In">
+        <stylesheets>
+        <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+        </stylesheets>
+    </Button>
+      <TextField layoutX="720.0" layoutY="329.0" prefHeight="25.0" prefWidth="280.0" styleClass="text-field">
+         <stylesheets>
+         <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+     </TextField>
+      <PasswordField layoutX="720.0" layoutY="412.0" prefHeight="25.0" prefWidth="280.0" styleClass="text-field">
+          <stylesheets>
+          <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+          </stylesheets>
+      </PasswordField>
+      <Label layoutX="720.0" layoutY="310.0" styleClass="field-header" text="Officer ID:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="720.0" layoutY="390.0" styleClass="field-header" text="Password:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+      </Label>
+   </children>
+</AnchorPane>

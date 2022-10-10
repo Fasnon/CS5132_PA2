@@ -1,0 +1,217 @@
+Index: FaultTracker/src/View/Start.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import java.net.URL?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.image.Image?>\r\n<?import javafx.scene.image.ImageView?>\r\n<?import javafx.scene.layout.AnchorPane?>\r\n\r\n<AnchorPane prefHeight=\"680.0\" prefWidth=\"1080.0\" xmlns=\"http://javafx.com/javafx/18\" xmlns:fx=\"http://javafx.com/fxml/1\">\r\n   <children>\r\n      <AnchorPane fx:id=\"header\" minHeight=\"240.0\" minWidth=\"1080.0\" prefHeight=\"139.0\" prefWidth=\"600.0\" styleClass=\"header-bg\">\r\n         <stylesheets>\r\n            <URL value=\"@../../../../FaultTracker/resources/styles/start.css\" />\r\n         </stylesheets>\r\n         <children>\r\n            <ImageView fitHeight=\"200.0\" fitWidth=\"200.0\" layoutX=\"53.0\" layoutY=\"24.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n               <image>\r\n                  <Image url=\"@../../../../FaultTracker/resources/images/nea_logo_real.png\" />\r\n               </image></ImageView>\r\n            <Label layoutX=\"254.0\" layoutY=\"36.0\" prefHeight=\"135.0\" prefWidth=\"220.0\" styleClass=\"logo-text\" text=\"National Environmental Agency\" textFill=\"WHITE\" wrapText=\"true\">\r\n                 <stylesheets>\r\n                    <URL value=\"@../../../../FaultTracker/resources/styles/start.css\" />\r\n                 </stylesheets>>\r\n            </Label>\r\n            <Label layoutX=\"254.0\" layoutY=\"172.0\"  text=\"Safeguard, Nurture, Cherish\" styleClass=\"logo-motto\" textFill=\"#FFCA42\">\r\n                <stylesheets>\r\n                    <URL value=\"@../../../../FaultTracker/resources/styles/start.css\" />\r\n                 </stylesheets>\r\n            </Label>\r\n         </children>\r\n         </AnchorPane>\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/FaultTracker/src/View/Start.fxml b/FaultTracker/src/View/Start.fxml
+--- a/FaultTracker/src/View/Start.fxml	(revision 4048bd2bab961b2d068744ca17500afa0ce3c1b6)
++++ b/FaultTracker/src/View/Start.fxml	(date 1665023097882)
+@@ -5,29 +5,42 @@
+ <?import javafx.scene.image.Image?>
+ <?import javafx.scene.image.ImageView?>
+ <?import javafx.scene.layout.AnchorPane?>
++<?import javafx.scene.shape.Line?>
+ 
+-<AnchorPane prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
++<AnchorPane prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StartController">
+    <children>
+-      <AnchorPane fx:id="header" minHeight="240.0" minWidth="1080.0" prefHeight="139.0" prefWidth="600.0" styleClass="header-bg">
++      <AnchorPane fx:id="header" minHeight="220.0" minWidth="1080.0" prefHeight="139.0" prefWidth="600.0" styleClass="header-bg">
+          <stylesheets>
+             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+          </stylesheets>
+          <children>
+-            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="53.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
++            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="53.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                   <Image url="@../../../../FaultTracker/resources/images/nea_logo_real.png" />
+                </image></ImageView>
+-            <Label layoutX="254.0" layoutY="36.0" prefHeight="135.0" prefWidth="220.0" styleClass="logo-text" text="National Environmental Agency" textFill="WHITE" wrapText="true">
++            <Label layoutX="258.0" layoutY="30.0" prefHeight="135.0" prefWidth="220.0" styleClass="logo-text" text="National Environmental Agency" wrapText="true">
+                  <stylesheets>
+                     <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+                  </stylesheets>>
+             </Label>
+-            <Label layoutX="254.0" layoutY="172.0"  text="Safeguard, Nurture, Cherish" styleClass="logo-motto" textFill="#FFCA42">
++            <Label layoutX="258.0" layoutY="166.0" styleClass="logo-motto" text="Safeguard, Nurture, Cherish">
+                 <stylesheets>
+                     <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+                  </stylesheets>
+             </Label>
+          </children>
+          </AnchorPane>
++      <Label layoutX="56.0" layoutY="260.0" styleClass="desc-title" text="Efficient Feedback and Enquiry System ">
++        <stylesheets>
++          <URL value="@../../../../FaultTracker/resources/styles/start.css" />
++       </stylesheets>
++      </Label>
++      <Label layoutX="720.0" layoutY="260.0" styleClass="desc-title" text="I'm an officer">
++          <stylesheets>
++            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
++         </stylesheets>
++        </Label>
++      <Line endX="440.0" endY="288.0" layoutX="246.0" layoutY="331.0" startX="440.0" startY="-72.0" />
++      <Label layoutX="56.0" layoutY="310.0" prefWidth="560.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu mattis ut dolor nec. Gravida vel scelerisque urna, sem consectetur eu. Quis id dui ultrices id risus. In fermentum lectus lectus id viverra. Scelerisque faucibus suspendisse nisi, adipiscing turpis. Fermentum, morbi gravida varius odio ut augue. &#xD; &#xD;Nisl interdum vel viverra sed porttitor sollicitudin quam. Tellus vulputate sagittis vulputate nec suscipit ac pellentesque in sed. Senectus hac massa gravida mauris, ut. Aenean odio tortor lorem feugiat nulla adipiscing quam. Et sit aenean non facilisis at massa in. Lacus, duis neque a, laoreet fringilla etiam nullam dolor. Facilisis eros, non nulla senectus aliquam arcu a ultrices." wrapText="true" />
+    </children>
+ </AnchorPane>
+Index: FaultTracker/resources/styles/start.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@font-face {\r\n    src: url('../fonts/Arimo-SemiBold.ttf');\r\n}\r\n\r\n.header-bg{\r\n    -fx-background-color: linear-gradient(to right, #75B649 50%, #BED73D);\r\n}\r\n\r\n.logo-text{\r\n    -fx-font-family: \"Arimo SemiBold\";\r\n    -fx-font-size: 30;\r\n    -fx-line-spacing: 3;\r\n}\r\n\r\n.logo-motto{\r\n    -fx-font-family: \"Arimo SemiBold\";\r\n    -fx-font-size: 16;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/FaultTracker/resources/styles/start.css b/FaultTracker/resources/styles/start.css
+--- a/FaultTracker/resources/styles/start.css	(revision 4048bd2bab961b2d068744ca17500afa0ce3c1b6)
++++ b/FaultTracker/resources/styles/start.css	(date 1665023183550)
+@@ -2,6 +2,10 @@
+     src: url('../fonts/Arimo-SemiBold.ttf');
+ }
+ 
++@font-face {
++    src: url('../fonts/Arimo-Regular.ttf');
++}
++
+ .header-bg{
+     -fx-background-color: linear-gradient(to right, #75B649 50%, #BED73D);
+ }
+@@ -10,9 +14,23 @@
+     -fx-font-family: "Arimo SemiBold";
+     -fx-font-size: 30;
+     -fx-line-spacing: 3;
++    -fx-text-fill: "#FFFFFF";
+ }
+ 
+ .logo-motto{
+     -fx-font-family: "Arimo SemiBold";
+     -fx-font-size: 16;
++    -fx-text-fill: "#FFCA42";
++}
++
++.desc-title{
++    -fx-font-family: "Arimo SemiBold";
++    -fx-font-size: 22;
++    -fx-text-fill: "#333333";
++}
++
++.desc-text{
++    -fx-font-family: "Arimo SemiBold";
++    -fx-font-size: 16;
++    -fx-text-fill: "#666666";
+ }
+\ No newline at end of file
+Index: FaultTracker/src/Controller/StartController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Controller;\r\n\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.layout.AnchorPane;\r\n\r\npublic class StartController {\r\n    @FXML\r\n    private AnchorPane header;\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/FaultTracker/src/Controller/StartController.java b/FaultTracker/src/Controller/StartController.java
+--- a/FaultTracker/src/Controller/StartController.java	(revision 4048bd2bab961b2d068744ca17500afa0ce3c1b6)
++++ b/FaultTracker/src/Controller/StartController.java	(date 1664964283751)
+@@ -1,10 +1,18 @@
+ package Controller;
+ 
+ import javafx.fxml.FXML;
++import javafx.scene.effect.DropShadow;
+ import javafx.scene.layout.AnchorPane;
++import javafx.scene.paint.Color;
+ 
+ public class StartController {
+     @FXML
+     private AnchorPane header;
++    DropShadow dropShadow = new DropShadow(5, Color.BLACK);
++
++
++    public void initialize(){
++        header.setEffect(dropShadow);
++    }
+ 
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"7e17dcf7-4922-4675-9be6-fc671d381a80\" name=\"Changes\" comment=\"impt\">\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Bold.ttf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-BoldItalic.ttf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Italic.ttf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Medium.ttf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-MediumItalic.ttf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Regular.ttf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-SemiBold.ttf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-SemiBoldItalic.ttf\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/images/nea_logo_real.png\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/resources/styles/start.css\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/src/Controller/StartController.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/FaultTracker/src/View/Start.fxml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/FaultTracker/src/Controller/ReportFaultController.java\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/FaultTracker/src/View/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/FaultTracker/src/View/Main.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/FaultTracker/src/View/SignIn.fxml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/FaultTracker/Controller/ReportFaultController.class\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/FaultTracker/View/Main.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/FaultTracker/View/Main.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/out/production/FaultTracker/View/SignIn.fxml\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2FQfH0CU7PafGPr3s2ItrnGp49K\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Downloaded.Files.Path.Enabled\": \"false\",\r\n    \"Repository.Attach.Annotations\": \"false\",\r\n    \"Repository.Attach.JavaDocs\": \"false\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"jdk.selected.JAVA_MODULE\": \"18\",\r\n    \"last_opened_file_path\": \"C:/Users/TanKa/IdeaProjects/CS5132_PA/FaultTracker/src\",\r\n    \"project.structure.last.edited\": \"Global Libraries\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"settings.editor.selected.configurable\": \"reference.settingsdialog.IDE.editor.colors.Java\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\TanKa\\IdeaProjects\\CS5132_PA\\FaultTracker\\src\" />\r\n      <recent name=\"C:\\Users\\TanKa\\IdeaProjects\\CS5132_PA\\FaultTracker\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\TanKa\\IdeaProjects\\CS5132_PA\\FaultTracker\\resources\\fonts\" />\r\n      <recent name=\"C:\\Users\\TanKa\\IdeaProjects\\CS5132_PA\\FaultTracker\\resources\\images\" />\r\n      <recent name=\"C:\\Users\\TanKa\\IdeaProjects\\CS5132_PA\\FaultTracker\\resources\\styles\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" nameIsGenerated=\"true\">\r\n      <option name=\"ALTERNATIVE_JRE_PATH\" value=\"openjdk-19\" />\r\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"true\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"View.Main\" />\r\n      <module name=\"FaultTracker\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"7e17dcf7-4922-4675-9be6-fc671d381a80\" name=\"Changes\" comment=\"\" />\r\n      <created>1664429136912</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1664429136912</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"init commit\">\r\n      <created>1664471903072</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664471903072</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"init commit\">\r\n      <created>1664471909317</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664471909317</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"implement Report class (by notmeegoreng)\">\r\n      <created>1664509729806</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664509729806</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"added new dependency\">\r\n      <created>1664650261912</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664650261912</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"impt\">\r\n      <created>1664932574087</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664932574087</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"init commit\" />\r\n    <MESSAGE value=\"implement Report class (by notmeegoreng)\" />\r\n    <MESSAGE value=\"added new dependency\" />\r\n    <MESSAGE value=\"impt\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"impt\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 4048bd2bab961b2d068744ca17500afa0ce3c1b6)
++++ b/.idea/workspace.xml	(date 1665061857809)
+@@ -4,27 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="impt">
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Bold.ttf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-BoldItalic.ttf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Italic.ttf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Medium.ttf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-MediumItalic.ttf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-Regular.ttf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-SemiBold.ttf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/fonts/Arimo-SemiBoldItalic.ttf" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/images/nea_logo_real.png" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/StartController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/FaultTracker/src/View/Start.fxml" afterDir="false" />
++    <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="added font, logo and relevant styles&#10;finished the header on start page">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/ReportFaultController.java" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Main.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/SignIn.fxml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/ReportFaultController.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/StartController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Start.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Start.fxml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/SignIn.fxml" beforeDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -59,7 +44,7 @@
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+     "jdk.selected.JAVA_MODULE": "18",
+     "last_opened_file_path": "C:/Users/TanKa/IdeaProjects/CS5132_PA/FaultTracker/src",
+-    "project.structure.last.edited": "Global Libraries",
++    "project.structure.last.edited": "Libraries",
+     "project.structure.proportion": "0.15",
+     "project.structure.side.proportion": "0.2",
+     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java"
+@@ -131,7 +116,21 @@
+       <option name="project" value="LOCAL" />
+       <updated>1664932574087</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="added font, logo and relevant styles&#10;finished the header on start page">
++      <created>1664963837254</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1664963837254</updated>
++    </task>
++    <task id="LOCAL-00007" summary="added font, logo and relevant styles&#10;finished the header on start page">
++      <created>1664963889853</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1664963889853</updated>
++    </task>
++    <option name="localTasksCounter" value="8" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -150,6 +149,7 @@
+     <MESSAGE value="implement Report class (by notmeegoreng)" />
+     <MESSAGE value="added new dependency" />
+     <MESSAGE value="impt" />
+-    <option name="LAST_COMMIT_MESSAGE" value="impt" />
++    <MESSAGE value="added font, logo and relevant styles&#10;finished the header on start page" />
++    <option name="LAST_COMMIT_MESSAGE" value="added font, logo and relevant styles&#10;finished the header on start page" />
+   </component>
+ </project>
+\ No newline at end of file
