@@ -35,12 +35,12 @@
           </Label>
          </children>
          </AnchorPane>
-      <Button fx:id="formBtn" layoutX="266.0" layoutY="516.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="25.0" prefWidth="52.0" styleClass="button" text="Back">
+      <Button fx:id="formBtn" layoutX="266.0" layoutY="516.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="32.0" prefWidth="64.0" styleClass="button" text="Back">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>
       </Button>
-      <Button fx:id="formBtn1" layoutX="831.0" layoutY="516.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="25.0" prefWidth="169.0" styleClass="button" text="Mark as Resolved (Delete)">
+      <Button fx:id="formBtn1" layoutX="831.0" layoutY="516.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="32.0" prefWidth="180.0" styleClass="quit-button" text="Mark as Resolved (Delete)">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>

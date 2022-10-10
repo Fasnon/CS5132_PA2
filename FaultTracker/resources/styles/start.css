@@ -53,9 +53,23 @@
 .button:hover{
     -fx-background-color:  "#cdcdcd";
 }
+.quit-button{
+    -fx-background-color:  "#DD5D5D";
+    -fx-text-fill: "#FFFFFF";
+    -fx-font-family: "Arimo Regular";
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: "#7B7B7B";
+    -fx-border-width: 0.33;
+    -fx-padding: 5 20 5 15;
+}
 
-.button:pressed{
-    -fx-background-color:  "#a5a5a5";
+.quit-button:hover{
+    -fx-background-color:  "#C34545";
+}
+
+.quit-button:pressed{
+    -fx-background-color:  "#B72B2B";
     -fx-background-insets: 3 0 3 0;
     -fx-border-insets: 3 0 3 0;
  }

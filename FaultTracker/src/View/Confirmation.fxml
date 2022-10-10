@@ -68,7 +68,7 @@
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>
       </Button>
-      <Button fx:id="quitBtn" layoutX="866.0" layoutY="560.0" mnemonicParsing="false" onAction="#quitApp" prefHeight="30.0" prefWidth="72.0" styleClass="button" text="Quit">
+      <Button fx:id="quitBtn" layoutX="866.0" layoutY="560.0" mnemonicParsing="false" onAction="#quitApp" prefHeight="30.0" prefWidth="72.0" styleClass="quit-button" text="Quit">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>

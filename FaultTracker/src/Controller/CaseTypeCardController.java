@@ -42,6 +42,7 @@ public class CaseTypeCardController {
         anchorPane.setStyle("-fx-background-color: \"CECECE\"; -fx-background-radius: 20;");
         File s = new File("FaultTracker/resources/images/type_" + type.toLowerCase() + ".png");
         typeImg.setImage(new Image(s.toURI().toString()));;
+        typeLbl.setStyle("-fx-text-fill: \"000000\"");
     }
 
     @FXML
@@ -51,6 +52,7 @@ public class CaseTypeCardController {
         anchorPane.setStyle("-fx-background-color: \"" + colour +"\"; -fx-background-radius: 20;");
         File s = new File("FaultTracker/resources/images/selected_" + type.toLowerCase() + ".png");
         typeImg.setImage(new Image(s.toURI().toString()));;
+        typeLbl.setStyle("-fx-text-fill: \"FFFFFF\"");
     }
 
     public void setData(String type, StepOneListener sol){
