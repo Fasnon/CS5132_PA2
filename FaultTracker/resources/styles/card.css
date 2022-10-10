@@ -1,0 +1,9 @@
+@font-face {
+    src: url('../fonts/Arimo-SemiBold.ttf');
+}
+
+.text{
+    -fx-font-family: "Arimo SemiBold";
+    -fx-font-size: 13;
+    -fx-text-fill: "#FFCA42";
+}

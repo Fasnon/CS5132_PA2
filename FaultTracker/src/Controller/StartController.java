@@ -32,7 +32,7 @@ public class StartController {
     @FXML
     public void adminLogIn(ActionEvent e) throws Exception{
         Stage primaryStage = (Stage) signinBtn.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(getClass().getResource("StepOne.fxml"));
+        Parent newRoot = FXMLLoader.load(getClass().getResource("/View/Admin.fxml"));
         primaryStage.getScene().setRoot(newRoot);
     }
     @FXML
