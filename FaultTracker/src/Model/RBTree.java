@@ -160,8 +160,14 @@ public class RBTree<T extends Comparable<? super T>> {
         else{
             if(!s.black){
 
-                
-
+                p.black = false;
+                s.black = true;
+                if(s.left_child){
+                    rightRotate(p);
+                }
+                else{
+                    leftRotate(p);
+                }
             }
         }
 
