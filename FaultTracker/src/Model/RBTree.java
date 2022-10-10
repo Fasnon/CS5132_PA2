@@ -63,11 +63,124 @@ public class RBTree<T extends Comparable<? super T>> {
         delete(item, root);
 
     }
-    public void delete(T item, RBNode<T> curr){
+    public RBNode<T> delete(T item, RBNode<T> curr){
+        if(this.height(root)==0){
+            return null;
+        }
+        if(item.compareTo(curr.getItem())<0){
+            curr.left = delete(item, curr.right);
 
+        }
+        else if(item.compareTo(curr.getItem())>0){
+            curr.right= delete(item, curr.left);
+        }
+
+        else{
+
+            if(curr.left == null){  //red then black or red or null
+                if(curr.black == false) {
+                    if (curr.right == null) { // null
+                        curr = null;
+                        return null;
+                    }
+                    else { // red or black or null or whatever
+                        curr = curr.right;
+                        curr.black = true;
+                    }
+                }
+                else{
+                    if(curr.right!=null&&curr.right.black!=true){
+                        // black then red
+                            curr = curr.right;
+                            curr.black = true;
+
+
+                    }
+                    else{// pain
+                        curr = curr.right;
+                        fixDoubleBlack(curr);
+                    }
+
+                }
+            }
+            else if(curr.right == null) {
+                curr =  curr.left;
+                if(curr.black == false) {
+                    if (curr.left == null) { // null
+                        curr = null;
+                        return null;
+                    }
+                    else { // red or black or null or whatever
+                        curr = curr.left;
+                        curr.black = true;
+                    }
+                }
+                else{
+                    if(curr.left!=null){
+                        if(curr.left.black!=true){ // black then red
+                            curr = curr.left;
+                            curr.black = true;
+
+                        }
+
+                    }
+                    else{// pain
+
+
+                    }
+
+                }
+
+            }
+            else {
+
+                RBNode<T> Temp = curr.right;
+                while(Temp.left!= null){
+                    Temp = Temp.left;
+                }
+                curr.setItem(Temp.getItem());
+                curr.right = delete(curr.getItem(), curr.right);
+            }
+        }
+        return null;
+
+    }
+
+    private void fixDoubleBlack(RBNode<T> curr) {
+        if(curr==root){
+
+            return;
+        }
+
+        RBNode<T> s = sibling(curr), p = curr.parent;
+        if(s==null){
+                fixDoubleBlack(curr.parent);
+
+        }
+        else{
+            if(!s.black){
+
+                
+
+            }
+        }
 
 
     }
+
+    private RBNode<T> sibling(RBNode<T> curr) {
+        if(curr.parent==null){
+            return null;
+
+        }
+        else if(curr.parent.left == curr){
+            return curr.parent.right;
+
+        }
+        else return curr.parent.left;
+
+    }
+
     private void insert(T item, RBNode<T> curr) {
         // Complete the recursive code for insertion below this comment
         int c = item.compareTo(curr.getItem());
@@ -106,5 +219,17 @@ public class RBTree<T extends Comparable<? super T>> {
         p.black = u.black = true;
         g.black = false;
         insert_fix(g);
+    }
+    private int height(RBNode<T> node){
+        if (node == null) return 0;
+        else{
+            int leftDepth = height(node.left);
+            int rightDepth = height(node.right);
+            if (leftDepth > rightDepth)
+                return (leftDepth + 1);
+            else
+                return (rightDepth + 1);
+        }
+
     }
 }
