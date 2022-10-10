@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StepOneController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StepOneController">
    <children>
       <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="59.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -66,12 +66,12 @@
          <font>
             <Font name="System Bold" size="13.0" />
          </font></Label>
-      <Button fx:id="backBtn" layoutX="246.0" layoutY="560.0" mnemonicParsing="false" onAction="#formBack" prefHeight="32.0" prefWidth="64.0" styleClass="button" text="Back">
+      <Button fx:id="backBtn" layoutX="243.0" layoutY="569.0" mnemonicParsing="false" onAction="#formBack" prefHeight="32.0" prefWidth="64.0" styleClass="button" text="Back">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>
       </Button>
-      <Button fx:id="proceedBtn" layoutX="866.0" layoutY="560.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="32.0" prefWidth="64.0" styleClass="button" text="Next">
+      <Button fx:id="proceedBtn" layoutX="863.0" layoutY="569.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="32.0" prefWidth="64.0" styleClass="button" text="Next">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>
@@ -87,7 +87,7 @@
           <RowConstraints maxHeight="202.00001017252603" minHeight="10.0" prefHeight="120.99997965494792" vgrow="SOMETIMES" />
         </rowConstraints>
       </GridPane>
-      <Label layoutX="135.0" layoutY="226.0" text="Select a case type:" styleClass="section-header" >
+      <Label layoutX="135.0" layoutY="226.0" styleClass="section-header" text="Select a case type:">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
          </stylesheets>

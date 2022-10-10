@@ -100,4 +100,15 @@ public class Report implements Comparable<Report> {
                 ", date=" + date +
                 '}';
     }
+
+    public Report(String type, String title, String description, String contact, String location, int urgency, int severity, Date date) {
+        this.type = type;
+        this.title = title;
+        this.description = description;
+        this.contact = contact;
+        this.location = location;
+        this.urgency = urgency;
+        this.severity = severity;
+        this.date = date;
+    }
 }

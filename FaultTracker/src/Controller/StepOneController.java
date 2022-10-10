@@ -46,9 +46,12 @@ public class StepOneController implements Initializable {
     void formProceed(ActionEvent event) throws Exception{
         if (selectedType != "nil") {
             Stage primaryStage = (Stage) backBtn.getScene().getWindow();
-            Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/View/StepTwo.fxml")));
-            primaryStage.getScene().setRoot(newRoot);
-            primaryStage.setUserData(selectedType);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/StepTwo.fxml"));
+//            Parent newRoot = FXMLLoader.load(Objects.requireNonNull());
+            primaryStage.getScene().setRoot(loader.load());
+            StepTwoController controller = loader.getController();
+            controller.initData(selectedType);
+//            primaryStage.setUserData(selectedType);
         }
         else{
             Alert a = new Alert(Alert.AlertType.ERROR);

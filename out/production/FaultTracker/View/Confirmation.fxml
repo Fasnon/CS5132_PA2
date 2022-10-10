@@ -73,16 +73,16 @@
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>
       </Button>
-      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="266.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true" >
+      <ImageView fitHeight="128.0" fitWidth="128.0" layoutX="266.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../../../../FaultTracker/resources/images/success_report.png" />
             </image>
             </ImageView>
-      <Label layoutX="412.0" layoutY="304.0" text="Report successfully submitted!" styleClass="success-text">
+      <Label layoutX="412.0" layoutY="304.0" styleClass="success-text" text="Report successfully submitted!">
         <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
         </stylesheets>
       </Label>
-      <Label layoutX="412.0" layoutY="356.0" text="at XX/XX/XXXX" />
+      <Label fx:id="dateLbl" layoutX="412.0" layoutY="356.0" text="at XX/XX/XXXX" />
    </children>
 </AnchorPane>
