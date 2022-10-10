@@ -115,10 +115,10 @@
       </Label>
       <Label fx:id="titleLbl" alignment="TOP_LEFT" layoutX="129.0" layoutY="270.0" prefHeight="57.0" prefWidth="313.0" text="Label" wrapText="true" />
       <Label fx:id="descLbl" alignment="TOP_LEFT" layoutX="80.0" layoutY="376.0" prefHeight="169.0" prefWidth="357.0" text="Label" wrapText="true" />
-      <Label fx:id="contactLbl" alignment="TOP_LEFT" layoutX="680.0" layoutY="270.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
-      <Label fx:id="urgancyLbl" alignment="TOP_LEFT" layoutX="680.0" layoutY="310.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
-      <Label fx:id="severityLbl" alignment="TOP_LEFT" layoutX="680.0" layoutY="350.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
-      <Label fx:id="locationLbl" alignment="TOP_LEFT" layoutX="680.0" layoutY="390.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
-      <Label fx:id="typeLbl" alignment="TOP_LEFT" layoutX="680.0" layoutY="430.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="contactLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="270.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="urgancyLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="310.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="severityLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="350.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="locationLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="390.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="typeLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="430.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
    </children>
 </AnchorPane>

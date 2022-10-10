@@ -4,26 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="basically finished ui">
+    <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="style table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultReporter/.idea/CS5132_PA2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultReporter/.idea/CS5132_PA2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/FaultTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/FaultTracker.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/resources/styles/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/AdminController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/CaseTypeCardController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/CaseViewController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/ConfirmationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/StartController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/StepOneController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/StepThreeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/StepTwoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/RBNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/RBTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/Report.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/Admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/resources/styles/start.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/CaseTypeCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/CaseTypeCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/Controller/ToggleTypeCardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Controller/ToggleTypeCardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/CaseView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/CaseView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/Confirmation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/Confirmation.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/src/View/StepThree.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/View/StepThree.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/CaseTypeCardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Controller/CaseTypeCardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/StepThree.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/StepThree.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665421538215</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="style table">
+      <created>1665422264942</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665422264942</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -200,6 +197,7 @@
     <MESSAGE value="implemented halfway admin amid other fixes" />
     <MESSAGE value="interactive grid/card views" />
     <MESSAGE value="basically finished ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="basically finished ui" />
+    <MESSAGE value="style table" />
+    <option name="LAST_COMMIT_MESSAGE" value="style table" />
   </component>
 </project>

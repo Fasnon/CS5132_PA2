@@ -41,14 +41,16 @@ public class ToggleTypeCardController {
         state = false;
         anchorPane.setStyle("-fx-background-color: \"CECECE\"; -fx-background-radius: 20;");
         File s = new File("FaultTracker/resources/images/type_" + type.toLowerCase() + ".png");
-        typeImg.setImage(new Image(s.toURI().toString()));;
+        typeImg.setImage(new Image(s.toURI().toString()));
+        typeLbl.setStyle("-fx-text-fill: \"000000\"");
     }
 
     public void select(){
         state = true;
         anchorPane.setStyle("-fx-background-color: \"" + colour + "\"; -fx-background-radius: 20;");
         File s = new File("FaultTracker/resources/images/selected_" + type.toLowerCase() + ".png");
-        typeImg.setImage(new Image(s.toURI().toString()));;
+        typeImg.setImage(new Image(s.toURI().toString()));
+        typeLbl.setStyle("-fx-text-fill: \"FFFFFF\"");
     }
 
     @FXML
