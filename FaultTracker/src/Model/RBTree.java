@@ -16,18 +16,54 @@ public class RBTree<T extends Comparable<? super T>> {
         }
     }
 
-    private void rightRotate(RBNode<T> node){
-        RBNode<T> left = node.left, left_right = left.right;
-        left.right = node;
-        node.left = left_right;
-        left.parent = node.parent;
+    private void rightRotate2(Node<T> node){
+        Node<T> left = node.neighbours[0], left_right = left.neighbours[1];
+        left.neighbours[1] = node;
+        node.neighbours[0] = left_right;
+        left.neighbours[2] = node.parent();
         left.left_child = node.left_child;
-        node.parent = left;
+        node.neighbours[2] = left;
         node.left_child = false;
-        left_right.parent = node;
+        left_right.neighbours[2] = node;
         left_right.left_child = true;
     }
+    private Node<T> rightRotate(Node<T> node){
+        // Complete the code below this comment
+        Node<T> root = node.neighbours[0];
+        if(root.neighbours[1]!=null){
+            Node<T> temp = root.neighbours[1];
+            root.neighbours[1] = node;
+            node.neighbours[0] = temp;
 
+
+        }
+        else{
+
+            root.neighbours[1] = node;
+            node.neighbours[0] = null;
+
+        }
+        return root;
+    }
+
+    // Method to perform the left rotation of a subtree with node as the root
+    private Node<T> leftRotate(Node<T> node){
+        Node<T> root = node.neighbours[1];
+        if(root.neighbours[0]!=null){
+            Node<T> temp = root.neighbours[0];
+            root.neighbours[0] = node;
+            node.neighbours[1] = temp;
+
+
+        }
+        else{
+
+            root.neighbours[0] = node;
+            node.neighbours[1] = null;
+
+        }
+        return root;
+    }
     private void leftRotate(RBNode<T> node){
         RBNode<T> right = node.right, right_left = right.left;
         right.left = node;
@@ -63,11 +99,170 @@ public class RBTree<T extends Comparable<? super T>> {
         delete(item, root);
 
     }
-    public void delete(T item, RBNode<T> curr){
+    public RBNode<T> delete(T item, RBNode<T> curr){
+        if(this.height(root)==0){
+            return null;
+        }
+        if(item.compareTo(curr.getItem())<0){
+            curr.left = delete(item, curr.right);
+
+        }
+        else if(item.compareTo(curr.getItem())>0){
+            curr.right= delete(item, curr.left);
+        }
+
+        else{
+
+            if(curr.left == null){  //red then black or red or null
+                if(curr.black == false) {
+                    if (curr.right == null) { // null
+                        curr = null;
+                        return null;
+                    }
+                    else { // red or black or null or whatever
+                        curr = curr.right;
+                        curr.black = true;
+                    }
+                }
+                else{
+                    if(curr.right!=null&&curr.right.black!=true){
+                        // black then red
+                            curr = curr.right;
+                            curr.black = true;
+
+
+                    }
+                    else{// pain
+                        curr = curr.right;
+                        fixDoubleBlack(curr);
+                    }
+
+                }
+            }
+            else if(curr.right == null) {
+                curr =  curr.left;
+                if(curr.black == false) {
+                    if (curr.left == null) { // null
+                        curr = null;
+                        return null;
+                    }
+                    else { // red or black or null or whatever
+                        curr = curr.left;
+                        curr.black = true;
+                    }
+                }
+                else{
+                    if(curr.left!=null){
+                        if(curr.left.black!=true){ // black then red
+                            curr = curr.left;
+                            curr.black = true;
+
+                        }
+
+                    }
+                    else{// pain
+
+
+                    }
+
+                }
+
+            }
+            else {
+
+                RBNode<T> Temp = curr.right;
+                while(Temp.left!= null){
+                    Temp = Temp.left;
+                }
+                curr.setItem(Temp.getItem());
+                curr.right = delete(curr.getItem(), curr.right);
+            }
+        }
+        return null;
+
+    }
+
+    private void fixDoubleBlack(Node<T> curr) {
+        if(curr==root){
+
+            return;
+        }
+
+        Node<T> s = curr.uncle(), p = curr.parent();
+        if(s==null){
+                fixDoubleBlack(curr.parent());
+
+        }
+        else{
+            if(!s.black){
+
+                p.black = false;
+                s.black = true;
+                if(s.left_child){
+                    rightRotate(p);
+                }
+                else{
+                    leftRotate(p);
+                }
+                fixDoubleBlack(s);
+            }
+            else{
+                if((s.neighbours[0]!=null&&(!s.neighbours[0].black)||(s.neighbours[1]!=null&&(!(s.neighbours[1].black))))){
+                    if((s.neighbours[0]!=null&&(!s.neighbours[0].black))){
+                        if(s.left_child){
+                            s.neighbours[0].black = s.black;
+                            s.black = p.black;
+                            rightRotate(p);
+
+                        }
+                        else{
+                            s.neighbours[0].black = p.black;
+                            rightRotate(s);
+                            leftRotate(p);
+
+
+                        }
+
+                    }
+                    else{
+
+                        if(s.left_child){
+                            s.neighbours[1].black = p.black;
+                            leftRotate(s);
+                            rightRotate(p);
+
+
+                        }
+                        else{
+                            s.neighbours[1].black= s.black;
+                            s.black = p.black;
+                            leftRotate(p);
+
+                        }
+                    }
+                    p.black = true;
+
+                }
+                else{
+
+                    s.black = false;
+                    if(p.black)
+                        fixDoubleBlack(p);
+                    else
+                        p.black = true;
+                }
+
+
+
+            }
+        }
 
 
 
     }
+
+
+
     private void insert(T item, RBNode<T> curr) {
         // Complete the recursive code for insertion below this comment
         int c = item.compareTo(curr.getItem());
@@ -106,5 +301,17 @@ public class RBTree<T extends Comparable<? super T>> {
         p.black = u.black = true;
         g.black = false;
         insert_fix(g);
+    }
+    private int height(RBNode<T> node){
+        if (node == null) return 0;
+        else{
+            int leftDepth = height(node.left);
+            int rightDepth = height(node.right);
+            if (leftDepth > rightDepth)
+                return (leftDepth + 1);
+            else
+                return (rightDepth + 1);
+        }
+
     }
 }

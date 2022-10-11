@@ -1,6 +1,6 @@
 package Model;
-public class RBNode<T> {
-    private T item;
+public class RBNode<T> extends Node<T>{
+
     // Package accessibility
     boolean black;
     Boolean left_child;
@@ -9,7 +9,9 @@ public class RBNode<T> {
     RBNode<T> parent;
 
     public RBNode(T item, boolean black){
-        this.item = item;
+        super(item,3);
+
+
         this.black = black;
     }
 
@@ -23,22 +25,18 @@ public class RBNode<T> {
         this(item, black, parent, left_child);
         this.left = left;
         this.right = right;
+        this.neighbours[0] = left;
+        this.neighbours[1] = right;
     }
 
     // Copy constructor to copy the Node object n
     public RBNode(RBNode<T> n){
-        this(n.item, n.black, n.parent, n.left_child, n.left, n.right);
+        this(n.getItem(), n.black, n.parent, n.left_child, n.left, n.right);
     }
 
     // Accessor method returns item stored in Node
-    public T getItem() {
-        return item;
-    }
 
     // Mutator method sets the item to be stored in Node
-    public void setItem(T item) {
-        this.item = item;
-    }
 
     RBNode<T> uncle() {
         if (parent == null) return null;
