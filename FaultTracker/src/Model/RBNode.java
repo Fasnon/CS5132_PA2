@@ -25,6 +25,8 @@ public class RBNode<T> extends Node<T>{
         this(item, black, parent, left_child);
         this.left = left;
         this.right = right;
+        this.neighbours[0] = left;
+        this.neighbours[1] = right;
     }
 
     // Copy constructor to copy the Node object n

@@ -3,6 +3,8 @@ public class Node<T> {
     private T item;
     Node<T>[] neighbours; //Package accessibility
 
+    boolean black;
+    Boolean left_child;
     // Constructor to create Node containing item of generic class T
     public Node(T item){ this.item = item; }
 
@@ -11,6 +13,25 @@ public class Node<T> {
     public Node(T item, int numNeighbours){
         this(item);
         this.neighbours = new Node[numNeighbours];
+    }
+    public Node(T item, boolean black){
+        this(item,3);
+
+
+        this.black = black;
+    }
+    public Node(T item, boolean black, boolean left_child) {
+        this(item, black);
+
+        this.left_child = left_child;
+    }
+    public Node(T item, boolean black, boolean left_child, Node<T> left, Node<T> right){
+        this(item, black, left_child);
+        this.neighbours[0] = left;
+        this.neighbours[1] = right;
+    }
+    public Node(RBNode<T> n){
+        this(n.getItem(), n.black,  n.left_child, n.neighbours[0], n.neighbours[1]);
     }
     // Constructor to create Node containing item of generic class T,
     // with child nodes defined in the neighbours Node array
@@ -29,5 +50,12 @@ public class Node<T> {
 
     // Mutator method sets the item to be stored in Node
     public void setItem(T item) { this.item = item;}
-
+    Node<T> uncle() {
+        if (this.neighbours[2]== null) return null;
+        if (left_child) return this.neighbours[2].neighbours[1];
+        return this.neighbours[2].neighbours[0];
+    }
+    Node<T> parent(){
+        return this.neighbours[2];
+    }
 }

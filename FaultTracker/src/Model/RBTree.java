@@ -16,18 +16,54 @@ public class RBTree<T extends Comparable<? super T>> {
         }
     }
 
-    private void rightRotate(RBNode<T> node){
-        RBNode<T> left = node.left, left_right = left.right;
-        left.right = node;
-        node.left = left_right;
-        left.parent = node.parent;
+    private void rightRotate2(Node<T> node){
+        Node<T> left = node.neighbours[0], left_right = left.neighbours[1];
+        left.neighbours[1] = node;
+        node.neighbours[0] = left_right;
+        left.neighbours[2] = node.parent();
         left.left_child = node.left_child;
-        node.parent = left;
+        node.neighbours[2] = left;
         node.left_child = false;
-        left_right.parent = node;
+        left_right.neighbours[2] = node;
         left_right.left_child = true;
     }
+    private Node<T> rightRotate(Node<T> node){
+        // Complete the code below this comment
+        Node<T> root = node.neighbours[0];
+        if(root.neighbours[1]!=null){
+            Node<T> temp = root.neighbours[1];
+            root.neighbours[1] = node;
+            node.neighbours[0] = temp;
 
+
+        }
+        else{
+
+            root.neighbours[1] = node;
+            node.neighbours[0] = null;
+
+        }
+        return root;
+    }
+
+    // Method to perform the left rotation of a subtree with node as the root
+    private Node<T> leftRotate(Node<T> node){
+        Node<T> root = node.neighbours[1];
+        if(root.neighbours[0]!=null){
+            Node<T> temp = root.neighbours[0];
+            root.neighbours[0] = node;
+            node.neighbours[1] = temp;
+
+
+        }
+        else{
+
+            root.neighbours[0] = node;
+            node.neighbours[1] = null;
+
+        }
+        return root;
+    }
     private void leftRotate(RBNode<T> node){
         RBNode<T> right = node.right, right_left = right.left;
         right.left = node;
@@ -146,15 +182,15 @@ public class RBTree<T extends Comparable<? super T>> {
 
     }
 
-    private void fixDoubleBlack(RBNode<T> curr) {
+    private void fixDoubleBlack(Node<T> curr) {
         if(curr==root){
 
             return;
         }
 
-        RBNode<T> s = sibling(curr), p = curr.parent;
+        Node<T> s = curr.uncle(), p = curr.parent();
         if(s==null){
-                fixDoubleBlack(curr.parent);
+                fixDoubleBlack(curr.parent());
 
         }
         else{
@@ -168,24 +204,64 @@ public class RBTree<T extends Comparable<? super T>> {
                 else{
                     leftRotate(p);
                 }
+                fixDoubleBlack(s);
+            }
+            else{
+                if((s.neighbours[0]!=null&&(!s.neighbours[0].black)||(s.neighbours[1]!=null&&(!(s.neighbours[1].black))))){
+                    if((s.neighbours[0]!=null&&(!s.neighbours[0].black))){
+                        if(s.left_child){
+                            s.neighbours[0].black = s.black;
+                            s.black = p.black;
+                            rightRotate(p);
+
+                        }
+                        else{
+                            s.neighbours[0].black = p.black;
+                            rightRotate(s);
+                            leftRotate(p);
+
+
+                        }
+
+                    }
+                    else{
+
+                        if(s.left_child){
+                            s.neighbours[1].black = p.black;
+                            leftRotate(s);
+                            rightRotate(p);
+
+
+                        }
+                        else{
+                            s.neighbours[1].black= s.black;
+                            s.black = p.black;
+                            leftRotate(p);
+
+                        }
+                    }
+                    p.black = true;
+
+                }
+                else{
+
+                    s.black = false;
+                    if(p.black)
+                        fixDoubleBlack(p);
+                    else
+                        p.black = true;
+                }
+
+
+
             }
         }
 
 
-    }
-
-    private RBNode<T> sibling(RBNode<T> curr) {
-        if(curr.parent==null){
-            return null;
-
-        }
-        else if(curr.parent.left == curr){
-            return curr.parent.right;
-
-        }
-        else return curr.parent.left;
 
     }
+
+
 
     private void insert(T item, RBNode<T> curr) {
         // Complete the recursive code for insertion below this comment
