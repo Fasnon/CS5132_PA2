@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.ArrayList;
+
 public class RBTree<T extends Comparable<? super T>> {
     private RBNode<T> root;
     public RBTree() {
@@ -15,7 +17,18 @@ public class RBTree<T extends Comparable<? super T>> {
             insert(item);
         }
     }
-
+    public ArrayList<T> inOrder(){
+        ArrayList<T> result = new ArrayList<>();
+        inOrder(root, result);
+        return result;
+    }
+    private void inOrder(Node<T> curr, ArrayList<T> result){
+        if (curr != null) {
+            inOrder(curr.neighbours[0], result);
+            result.add(curr.getItem());
+            inOrder(curr.neighbours[1], result);
+        }
+    }
     private void rightRotate2(Node<T> node){
         Node<T> left = node.neighbours[0], left_right = left.neighbours[1];
         left.neighbours[1] = node;
@@ -263,30 +276,30 @@ public class RBTree<T extends Comparable<? super T>> {
 
 
 
-    private void insert(T item, RBNode<T> curr) {
+    private void insert(T item, Node<T> curr) {
         // Complete the recursive code for insertion below this comment
         int c = item.compareTo(curr.getItem());
         if (c < 0) {
-            if (curr.left == null) {
-                curr.left = new RBNode<>(item, false, curr, true);
-                insert_fix(curr.left);
+            if (curr.neighbours[0] == null) {
+                curr.neighbours[0] = new Node<>(item, false, curr, true);
+                insert_fix(curr.neighbours[0]);
                 return;
             }
-            insert(item, curr.left);
+            insert(item, curr.neighbours[0]);
         } else if (c == 0) {
             throw new IllegalArgumentException(String.format("RB Tree already contains the value %s!", item));
-        } else if (curr.right == null) {
-            curr.right = new RBNode<>(item, false, curr, false);
-            insert_fix(curr.right);
+        } else if (curr.neighbours[1] == null) {
+            curr.neighbours[1] = new Node<>(item, false, curr, false);
+            insert_fix(curr.neighbours[1]);
             return;
         }
-        insert(item, curr.right);
+        insert(item, curr.neighbours[1]);
     }
 
-    private void insert_fix(RBNode<T> node) {
+    private void insert_fix(Node<T> node) {
         // node passed is red
-        if (node.parent.black) return;
-        RBNode<T> u = node.uncle(), p = node.parent, g = p.parent;
+        if (node.neighbours[2].black) return;
+        Node<T> u = node.uncle(), p = node.neighbours[2], g = p.neighbours[2];
         if (u.black) {
             if (node.left_child != p.left_child) {
                 // inside case
@@ -312,6 +325,24 @@ public class RBTree<T extends Comparable<? super T>> {
             else
                 return (rightDepth + 1);
         }
+
+    }
+    public RBTree<T> merge(RBTree<T> a){
+        ArrayList<T> thisone = inOrder();
+        ArrayList<T> B = inOrder();
+        RBTree<T> ret = new RBTree<T>();
+        for (int index1 = 0, index2 = 0; index2 < B.size(); index1++) {
+            if (index1 == thisone.size() || thisone.get(index1).compareTo(B.get(index2))>0) {
+                thisone.add(index1, B.get(index2++));
+            }
+        }
+        for(T as : thisone){
+            ret.insert(as);
+
+
+        }
+        return ret;
+
 
     }
 }

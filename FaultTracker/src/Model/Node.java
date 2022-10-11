@@ -25,6 +25,11 @@ public class Node<T> {
 
         this.left_child = left_child;
     }
+    public Node(T item, boolean black,Node<T> parent, boolean left_child) {
+        this(item, black);
+        this.neighbours[2] = parent;
+        this.left_child = left_child;
+    }
     public Node(T item, boolean black, boolean left_child, Node<T> left, Node<T> right){
         this(item, black, left_child);
         this.neighbours[0] = left;
