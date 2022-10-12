@@ -7,5 +7,10 @@ public class TestRBTree {
         RBTree<Integer> tree = new RBTree<>(new Integer[] {4, 2, -3, 7, -2, -4, 5, 3, -9, 0, -6});
         System.out.println(tree.inOrder());
         System.out.println(tree);
+
+        tree.delete(-2);
+        tree.delete(-9);
+        System.out.println(tree.inOrder());
+        System.out.println(tree);
     }
 }

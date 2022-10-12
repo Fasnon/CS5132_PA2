@@ -16,8 +16,6 @@ public class RBTree<T extends Comparable<? super T>> {
 
     public RBTree(T[] items) {
         for (T item : items) {
-            System.out.println(inOrder());
-            System.out.println(this);
             insert(item);
         }
     }
@@ -274,20 +272,15 @@ public class RBTree<T extends Comparable<? super T>> {
 
             }
         }
-
-
-
     }
 
 
 
     private void insert(T item, Node<T> curr) {
         // Complete the recursive code for insertion below this comment
-        System.out.printf("Checking %s against %s\n", curr.getItem(), item);
         int c = item.compareTo(curr.getItem());
         if (c < 0) {
             if (curr.neighbours[0] == null) {
-                System.out.printf("inserting %s as left child of %s\n", item, curr);
                 curr.neighbours[0] = new Node<>(item, false, true, curr);
                 insert_fix(curr.neighbours[0]);
                 return;
@@ -357,6 +350,27 @@ public class RBTree<T extends Comparable<? super T>> {
         return ret;
 
 
+    }
+
+    public ArrayList<Node<T>> levelOrder() {
+        ArrayList<Node<T>> result = new ArrayList<>();
+        Queue<Node<T>> level = new LinkedList<>();
+        level.add(root);
+        while (level.size() > 0) {
+            int level_size = level.size();
+            for (int i = 0; i < level_size; i++) {
+                Node<T> node = level.remove();
+                if (node.neighbours[0] != null) {
+                    level.add(node.neighbours[0]);
+                    result.add(node.neighbours[0]);
+                }
+                if (node.neighbours[1] != null) {
+                    level.add(node.neighbours[1]);
+                    result.add(node.neighbours[1]);
+                }
+            }
+        }
+        return result;
     }
 
     public String toString(){
