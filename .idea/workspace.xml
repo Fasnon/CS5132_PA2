@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e17dcf7-4922-4675-9be6-fc671d381a80" name="Changes" comment="basically finished ui">
+      <change afterPath="$PROJECT_DIR$/FaultTracker/src/Model/Pain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_11_2022_12_42_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_11_2022_12_42_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_11_2022_12_50_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_11_2022_12_50_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultReporter/.idea/CS5132_PA2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultReporter/.idea/CS5132_PA2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaultTracker/FaultTracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/FaultTracker.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FaultTracker/src/Model/RBTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/FaultTracker/src/Model/RBTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Controller/StepTwoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Controller/StepTwoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/RBNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Model/RBNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/Model/RBTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/Model/RBTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/Admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/View/StepTwo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/View/StepTwo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FaultTracker/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FaultTracker/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,22 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/TanKa/Downloads/javafx-sdk-19/lib/javafx.web.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/Vernon Pui/Downloads/openjfx-19_windows-x64_bin-sdk/javafx-sdk-19/lib/javafx.web.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker\src" />
@@ -59,7 +70,16 @@
       <recent name="C:\Users\TanKa\IdeaProjects\CS5132_PA\FaultTracker\resources\styles" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Pain">
+    <configuration name="Pain" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Model.Pain" />
+      <module name="FaultTracker" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="View.Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -69,6 +89,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.View.Main" />
+      <item itemvalue="Application.Pain" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
