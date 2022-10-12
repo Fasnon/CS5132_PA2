@@ -100,6 +100,7 @@ public class RBTree<T extends Comparable<? super T>> {
             curr = curr.left;
             if (curr.black) h++;
         }
+        h--;
         return h;
     }
 
