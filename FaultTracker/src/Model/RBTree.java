@@ -110,6 +110,7 @@ public class RBTree<T extends Comparable<? super T>> {
             return x.neighbours[1];
     }
     public Node<T> delete(T item, Node<T> curr){
+        System.out.println(curr.getItem());
         if(this.height(root)==0){
             return null;
         } else if (curr == null) {
@@ -167,7 +168,7 @@ public class RBTree<T extends Comparable<? super T>> {
                 else{
                     if(curr.left_child){
                        p.neighbours[0] =u;
-
+                        u.left_child = true;
                     }
                     else{// pain
                         p.neighbours[1] = u;
@@ -192,10 +193,18 @@ public class RBTree<T extends Comparable<? super T>> {
 //                curr.setItem(Temp.getItem());
 //                curr.neighbours[1] = delete(curr.getItem(), curr.neighbours[1]);
 //
-
+        swapValues(curr, u);
+            delete(u.getItem(),u);
         }
         return null;
 
+    }
+
+    private void swapValues(Node<T> curr, Node<T> u) {
+        T temp;
+        temp = u.getItem();
+        u.setItem(curr.getItem());
+        curr.setItem(temp);
     }
 
     private void fixDoubleBlack(Node<T> curr) {
