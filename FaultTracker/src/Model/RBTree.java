@@ -1,17 +1,21 @@
 package Model;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class RBTree<T extends Comparable<? super T>> {
-    private RBNode<T> root;
+    private Node<T> root;
     public RBTree() {
         root = null;
     }
 
     public RBTree(T item) {
-        root = new RBNode<>(item, true);
+        root = new Node<>(item, true);
+    }
+
+    public RBTree(Iterable<T> items) {
+        for (T item : items) {
+            insert(item);
+        }
     }
 
     public RBTree(T[] items) {
@@ -19,96 +23,62 @@ public class RBTree<T extends Comparable<? super T>> {
             insert(item);
         }
     }
+
     public ArrayList<T> inOrder(){
-        ArrayList<T> result = new ArrayList<>();
-        inOrder(root, result);
-        return result;
+        return inOrder(new ArrayList<>());
     }
-    private void inOrder(Node<T> curr, ArrayList<T> result){
+
+    public <C extends Collection<T>> C inOrder(C collection) {
+        inOrder(root, collection);
+        return collection;
+    }
+
+    private void inOrder(Node<T> curr, Collection<T> result){
         if (curr != null) {
             inOrder(curr.neighbours[0], result);
             result.add(curr.getItem());
             inOrder(curr.neighbours[1], result);
         }
     }
-    private void rightRotate2(Node<T> node){
-        Node<T> left = node.neighbours[0], left_right = left.neighbours[1];
-        left.neighbours[1] = node;
-        node.neighbours[0] = left_right;
-        left.neighbours[2] = node.parent();
-        left.left_child = node.left_child;
-        node.neighbours[2] = left;
-        node.left_child = false;
-        left_right.neighbours[2] = node;
-        left_right.left_child = true;
-    }
-    private Node<T> rightRotate(Node<T> node){
-        // Complete the code below this comment
-        Node<T> root = node.neighbours[0];
-        if(root.neighbours[1]!=null){
-            Node<T> temp = root.neighbours[1];
-            root.neighbours[1] = node;
-            node.neighbours[0] = temp;
 
-
-        }
-        else{
-
-            root.neighbours[1] = node;
-            node.neighbours[0] = null;
-
-        }
-        return root;
+    private void rightRotate(Node<T> node) {
+        rotate(node, false);
     }
 
-    // Method to perform the left rotation of a subtree with node as the root
-    private Node<T> leftRotate(Node<T> node){
-        Node<T> root = node.neighbours[1];
-        if(root.neighbours[0]!=null){
-            Node<T> temp = root.neighbours[0];
-            root.neighbours[0] = node;
-            node.neighbours[1] = temp;
-
-
-        }
-        else{
-
-            root.neighbours[0] = node;
-            node.neighbours[1] = null;
-
-        }
-        return root;
+    private void leftRotate(Node<T> node) {
+        rotate(node, true);
     }
-    private void leftRotate(RBNode<T> node){
-        RBNode<T> right = node.right, right_left = right.left;
-        right.left = node;
-        node.right = right_left;
-        right.parent = node.parent;
-        right.left_child = node.left_child;
-        node.parent = right;
-        node.left_child = true;
-        right_left.parent = node;
-        right_left.left_child = false;
+
+    private void rotate(Node<T> node, boolean left){
+        // 0 when left 1 otherwise
+        int i = Boolean.compare(true, left);
+        int alt_i = 1 - i;
+        Node<T> root = node.neighbours[alt_i], temp = root.neighbours[i], p = node.parent();
+        root.neighbours[i] = node;
+        node.neighbours[alt_i] = temp;
+        root.setParent(p);
+        root.left_child = node.left_child;
+        // 0 when left_child is true, 1 when false
+        if (p == null) this.root = root;
+        else p.neighbours[-node.left_child.compareTo(true)] = root;
+        node.setParent(root);
+        node.left_child = left;
+        if (temp != null) {
+            temp.setParent(node);
+            temp.left_child = !left;
+        }
     }
 
     public int blackHeight() {
         Node<T> curr = root;
-        int h = 2;
+        int h = 1;
         while (curr.neighbours[0] != null) {
             curr = curr.neighbours[0];
             if (curr.black) h++;
         }
-        h--;
         return h;
     }
 
-    public void insert(T item) {
-        if (root == null) {
-            root = new RBNode<>(item, true);
-            return;
-        }
-        insert(item, root);
-    }
     public void delete(T item){
         if(root == null)
             return;
@@ -124,7 +94,7 @@ public class RBTree<T extends Comparable<? super T>> {
             temp = temp.neighbours[0];
         return temp;
     }
-    private Node<T> BSTreplace(Node<T> x) {
+    private Node<T> BSTReplace(Node<T> x) {
         // when node have 2 children
         if (x.neighbours[0] != null&& x.neighbours[1] != null)
         return successor(x.neighbours[1]);
@@ -142,6 +112,9 @@ public class RBTree<T extends Comparable<? super T>> {
     public Node<T> delete(T item, Node<T> curr){
         if(this.height(root)==0){
             return null;
+        } else if (curr == null) {
+            // item not in tree
+            return null;
         }
         if(item.compareTo(curr.getItem())<0){
           delete(item, curr.neighbours[0]);
@@ -152,7 +125,7 @@ public class RBTree<T extends Comparable<? super T>> {
         }
 
         else{
-            Node<T> u = BSTreplace(curr);
+            Node<T> u = BSTReplace(curr);
             boolean isTrue= ((u == null&&u.black == true)&&(curr.black==true));
             Node<T> p = curr.neighbours[2];
             if(u == null){    //red then black or red or null
@@ -168,7 +141,7 @@ public class RBTree<T extends Comparable<? super T>> {
 
                     }
                     else{// pain
-                        if(curr.uncle()!= null){
+                        if(curr.sibling()!= null){
 
                             curr.black = false;
                         }
@@ -219,7 +192,7 @@ public class RBTree<T extends Comparable<? super T>> {
 //                curr.setItem(Temp.getItem());
 //                curr.neighbours[1] = delete(curr.getItem(), curr.neighbours[1]);
 //
-            
+
         }
         return null;
 
@@ -231,7 +204,7 @@ public class RBTree<T extends Comparable<? super T>> {
             return;
         }
 
-        Node<T> s = curr.uncle(), p = curr.parent();
+        Node<T> s = curr.sibling(), p = curr.parent();
         if(s==null){
                 fixDoubleBlack(curr.parent());
 
@@ -301,7 +274,13 @@ public class RBTree<T extends Comparable<? super T>> {
         }
     }
 
-
+    public void insert(T item) {
+        if (root == null) {
+            root = new Node<>(item, true);
+            return;
+        }
+        insert(item, root);
+    }
 
     private void insert(T item, Node<T> curr) {
         // Complete the recursive code for insertion below this comment
@@ -327,32 +306,37 @@ public class RBTree<T extends Comparable<? super T>> {
     private void insert_fix(Node<T> node) {
         // node passed is red
         if (node.neighbours[2].black) return;
-        Node<T> u = node.uncle(), p = node.neighbours[2], g = p.neighbours[2];
-        if (u == null) return;
-        if (u.black) {
+        Node<T> p = node.neighbours[2], u = p.sibling(), g = p.neighbours[2];
+        if (u == null || u.black) {
             if (node.left_child != p.left_child) {
                 // inside case
                 if (node.left_child) rightRotate(p);
                 else leftRotate(p);
             }
             // outside case
-            if (node.left_child) rightRotate(g);
-            else leftRotate(g);
+            g.black = !g.black;
+            if (node.left_child) {
+                g.neighbours[0].black = !g.neighbours[0].black;
+                rightRotate(g);
+            } else {
+                g.neighbours[1].black = !g.neighbours[1].black;
+                leftRotate(g);
+            }
             return;
         }
         // uncle red case
         p.black = u.black = true;
-        if (g != null) {
+        if (g != null && g != root) {
             g.black = false;
             insert_fix(g);
         }
     }
 
-    private int height(RBNode<T> node){
+    private int height(Node<T> node){
         if (node == null) return 0;
         else{
-            int leftDepth = height(node.left);
-            int rightDepth = height(node.right);
+            int leftDepth = height(node.neighbours[0]);
+            int rightDepth = height(node.neighbours[1]);
             if (leftDepth > rightDepth)
                 return (leftDepth + 1);
             else
@@ -360,23 +344,57 @@ public class RBTree<T extends Comparable<? super T>> {
         }
 
     }
-    public RBTree<T> merge(RBTree<T> a){
-        ArrayList<T> thisone = inOrder();
-        ArrayList<T> B = inOrder();
-        RBTree<T> ret = new RBTree<T>();
-        for (int index1 = 0, index2 = 0; index2 < B.size(); index1++) {
-            if (index1 == thisone.size() || thisone.get(index1).compareTo(B.get(index2))>0) {
-                thisone.add(index1, B.get(index2++));
+
+    public RBTree<T> merge(RBTree<T> o) {
+        // LinkedList implements both Queue and List
+        LinkedList<T> a = this.inOrder(new LinkedList<>()), b = o.inOrder(new LinkedList<>()), out = new LinkedList<>();
+        while (!(a.isEmpty() || b.isEmpty())) {
+            if (a.peek().compareTo(b.peek()) <= 0) {
+                out.add(a.remove());
+            } else {
+                out.add(b.remove());
             }
         }
-        for(T as : thisone){
-            ret.insert(as);
+        out.addAll(a);
+        out.addAll(b);
+        return constructFromSorted(out);
+    }
 
-
+    public static <E extends Comparable<? super E>> RBTree<E> constructFromSorted(List<E> l) {
+        if (l.size() <= 2) {
+            return new RBTree<>(l);
         }
-        return ret;
+        // constructs a full binary tree with all black nodes
+        // then continues to complete with all red nodes
 
+        // levels are descending, the lowest full level is 1
+        // for level == 0 when we do the second step
+        // this number is passed
+        int log2_s1 = 30 - Integer.numberOfLeadingZeros(l.size() + 1);
 
+        RBTree<E> tree = new RBTree<>();
+        int middle = l.size() / 2;
+        tree.root = new Node<>(
+                l.get(middle), true, null,
+                constructFromSorted(l.subList(0, middle), log2_s1),
+                constructFromSorted(l.subList(++middle, l.size()), log2_s1),
+                null);
+        return tree;
+    }
+
+    private static <E extends Comparable<? super E>> Node<E> constructFromSorted(List<E> l, int level) {
+        // levels are descending, the lowest full level is 1
+        if (l.size() < 2) {
+            if (l.isEmpty()) return null;
+            return new Node<>(l.get(0), level != 0);
+        }
+        int middle = l.size() / 2;
+        return new Node<E>(
+                l.get(middle), true, null,
+                constructFromSorted(l.subList(0, middle), --level),
+                constructFromSorted(l.subList(++middle, l.size()), level),
+                null);
+        // parent and left_child will get set when it is passed as left/right to constructor
     }
 
     public ArrayList<Node<T>> levelOrder() {
@@ -402,25 +420,29 @@ public class RBTree<T extends Comparable<? super T>> {
 
     public String toString(){
         if (root == null) return "";
-        StringBuilder result = new StringBuilder(String.format("%-2s \n", root.getItem()));
+        StringBuilder result = new StringBuilder(String.format("%-3s b \n", root.getItem()));
         Queue<Node<T>> level = new LinkedList<>();
         level.add(root);
-
+        char c;
         while (level.size() > 0) {
             int level_size = level.size();
             for (int i = 0; i < level_size; i++) {
                 Node<T> node = level.remove();
                 if (node.neighbours[0] != null) {
                     level.add(node.neighbours[0]);
-                    result.append(String.format("%-2s ", node.neighbours[0].getItem()));
+                    if (node.neighbours[0].black) c = 'b';
+                    else c = 'r';
+                    result.append(String.format("%-3s %s ", node.neighbours[0].getItem(), c));
                 } else {
-                    result.append("   ");
+                    result.append("      ");
                 }
                 if (node.neighbours[1] != null) {
                     level.add(node.neighbours[1]);
-                    result.append(String.format("%-2s ", node.neighbours[1].getItem()));
+                    if (node.neighbours[1].black) c = 'b';
+                    else c = 'r';
+                    result.append(String.format("%-3s %s ", node.neighbours[1].getItem(), c));
                 } else {
-                    result.append("   ");
+                    result.append("      ");
                 }
             }
             result.append("\n");
