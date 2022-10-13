@@ -8,7 +8,7 @@ public class TestRBTree {
         System.out.println(tree.inOrder());
         System.out.println(tree);
 
-        // tree.delete(-2);
+         tree.delete(-2);
 
         System.out.println("aft del");
         System.out.println(tree.inOrder());
