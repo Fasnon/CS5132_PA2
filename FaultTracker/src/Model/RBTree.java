@@ -92,10 +92,10 @@ public class RBTree<T extends Comparable<? super T>> {
     }
 
     public int blackHeight() {
-        RBNode<T> curr = root;
+        Node<T> curr = root;
         int h = 2;
-        while (curr.left != null) {
-            curr = curr.left;
+        while (curr.neighbours[0] != null) {
+            curr = curr.neighbours[0];
             if (curr.black) h++;
         }
         h--;
@@ -115,84 +115,111 @@ public class RBTree<T extends Comparable<? super T>> {
         delete(item, root);
 
     }
-    public RBNode<T> delete(T item, RBNode<T> curr){
+    // find node that do not have a left child
+    // in the subtree of the given node
+    private Node<T> successor(Node<T> x) {
+        Node<T> temp = x;
+
+        while (temp.neighbours[0] != null)
+            temp = temp.neighbours[0];
+        return temp;
+    }
+    private Node<T> BSTreplace(Node<T> x) {
+        // when node have 2 children
+        if (x.neighbours[0] != null&& x.neighbours[1] != null)
+        return successor(x.neighbours[1]);
+
+        // when leaf
+        if (x.neighbours[0] == null && x.neighbours[1] == null)
+        return null;
+
+        // when single child
+        if (x.neighbours[0] != null)
+            return x.neighbours[0];
+        else
+            return x.neighbours[1];
+    }
+    public Node<T> delete(T item, Node<T> curr){
         if(this.height(root)==0){
             return null;
         }
         if(item.compareTo(curr.getItem())<0){
-            curr.left = delete(item, curr.right);
+          delete(item, curr.neighbours[0]);
 
         }
         else if(item.compareTo(curr.getItem())>0){
-            curr.right= delete(item, curr.left);
+        delete(item, curr.neighbours[1]);
         }
 
         else{
+            Node<T> u = BSTreplace(curr);
+            boolean isTrue= ((u == null&&u.black == true)&&(curr.black==true));
+            Node<T> p = curr.neighbours[2];
+            if(u == null){    //red then black or red or null
+                if(curr == root) {
+                    root = null;
 
-            if(curr.left == null){  //red then black or red or null
-                if(curr.black == false) {
-                    if (curr.right == null) { // null
-                        curr = null;
-                        return null;
-                    }
-                    else { // red or black or null or whatever
-                        curr = curr.right;
-                        curr.black = true;
-                    }
                 }
                 else{
-                    if(curr.right!=null&&curr.right.black!=true){
+                    if(isTrue){
                         // black then red
-                            curr = curr.right;
-                            curr.black = true;
+                           fixDoubleBlack(curr);
 
 
                     }
                     else{// pain
-                        curr = curr.right;
-                        fixDoubleBlack(curr);
+                        if(curr.uncle()!= null){
+
+                            curr.black = false;
+                        }
+                    }
+                    if(curr.left_child){
+                        p.neighbours[0] = null;
+                    }
+                    else{
+
+                        p.neighbours[1] = null;
                     }
 
                 }
+                return curr;
             }
-            else if(curr.right == null) {
-                curr =  curr.left;
-                if(curr.black == false) {
-                    if (curr.left == null) { // null
-                        curr = null;
-                        return null;
-                    }
-                    else { // red or black or null or whatever
-                        curr = curr.left;
-                        curr.black = true;
-                    }
+            if(curr.neighbours[0] == null||curr.neighbours[1] == null) {
+
+                if(curr== root) {
+                    curr.setItem(u.getItem());
+                   curr.neighbours[0] = null;
+                    curr.neighbours[1] = null;
                 }
                 else{
-                    if(curr.left!=null){
-                        if(curr.left.black!=true){ // black then red
-                            curr = curr.left;
-                            curr.black = true;
-
-                        }
+                    if(curr.left_child){
+                       p.neighbours[0] =u;
 
                     }
                     else{// pain
-
+                        p.neighbours[1] = u;
 
                     }
-
+                    u.neighbours[2] = p;
+                    if(isTrue){
+                        fixDoubleBlack(u);
+                    }
+                    else{
+                        u.black = true;
+                    }
                 }
-
+                return curr;
             }
-            else {
 
-                RBNode<T> Temp = curr.right;
-                while(Temp.left!= null){
-                    Temp = Temp.left;
-                }
-                curr.setItem(Temp.getItem());
-                curr.right = delete(curr.getItem(), curr.right);
-            }
+
+//                Node<T> Temp = curr.neighbours[1];
+//                while(Temp.neighbours[0]!= null){
+//                    Temp = Temp.neighbours[0];
+//                }
+//                curr.setItem(Temp.getItem());
+//                curr.neighbours[1] = delete(curr.getItem(), curr.neighbours[1]);
+//
+            
         }
         return null;
 

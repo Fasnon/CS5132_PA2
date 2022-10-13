@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StepTwoController">
+   <children>
+      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="59.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../FaultTracker/resources/images/nea_logo_real.png" />
+               </image>
+               </ImageView>
+      <Label layoutX="184.0" layoutY="0.0" prefHeight="122.0" prefWidth="132.0" styleClass="logo-text" text="National Environmental Agency" wrapText="true">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="184.0" layoutY="104.0" styleClass="logo-motto" text="Safeguard, Nurture, Cherish">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="600.0" layoutY="8.0" prefHeight="135.0" prefWidth="400.0" styleClass="app-text" text="Efficient Feedback  &#13;and Enquiry System" wrapText="true">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Line endX="960.0" layoutX="60.0" layoutY="140.0" />
+      <Line endX="960.0" layoutX="60.0" layoutY="212.0" />
+      <Circle fill="WHITE" layoutX="360.0" layoutY="168.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#63A966" layoutX="540.0" layoutY="168.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="720.0" layoutY="168.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="356.0" layoutY="155.0" text="1">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="536.0" layoutY="155.0" text="2" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="155.0" text="3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="187.0" text="Case Type">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="499.0" layoutY="187.0" text="Additional Info">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="685.00" layoutY="187.0" text="Confirmation">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Button fx:id="backBtn" layoutX="70.0" layoutY="567.0" mnemonicParsing="false" onAction="#formBack" prefHeight="30.0" prefWidth="72.0" styleClass="button" text="Back">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+      </Button>
+      <Button fx:id="proceedBtn" layoutX="894.0" layoutY="582.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="30.0" prefWidth="72.0" styleClass="button" text="Next">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+      </Button>
+      <Label layoutX="70.0" layoutY="235.0" styleClass="section-header" text="Add More Information to Report">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="70.0" layoutY="264.0" styleClass="field-header" text="Title:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <TextField fx:id="titleTF" layoutX="70.0" layoutY="282.0" prefHeight="25.0" prefWidth="400.0" styleClass="text-field">
+            <stylesheets>
+                <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+            </stylesheets>
+        </TextField>
+      <Label layoutX="70.0" layoutY="317.0" styleClass="field-header" text="Description:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <TextArea fx:id="descTA" layoutX="70.0" layoutY="335.0" prefHeight="205.0" prefWidth="400.0" styleClass="text-area">
+            <stylesheets>
+                <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+            </stylesheets>
+        </TextArea>
+      <Label layoutX="566.0" layoutY="238.0" styleClass="field-header" text="Contact info: (if you wish to be contacted for updates)">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <TextField fx:id="contactTF" layoutX="566.0" layoutY="259.0" prefHeight="25.0" prefWidth="400.0" styleClass="text-field">
+            <stylesheets>
+                <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+            </stylesheets>
+        </TextField>
+      <Label alignment="TOP_LEFT" layoutX="566.0" layoutY="295.0" prefHeight="96.0" prefWidth="400.0" styleClass="desc-text" text="Here, severity refers to how many people this problem affects, whilst urgency refers to how dangerous it is if the problem remains unsolved. &#13; &#13;They both range from 1 to 3, with 1 being not at all, and 3 being very much so." wrapText="true">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="566.0" layoutY="399.0" styleClass="field-header" text="Severity:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="794.0" layoutY="399.0" styleClass="field-header" text="Urgency:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="566.0" layoutY="476.0" styleClass="field-header" text="Location: (Postcode)">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <TextField fx:id="locTF" layoutX="566.0" layoutY="502.0" prefHeight="25.0" prefWidth="400.0" styleClass="text-field">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </TextField>
+      <ChoiceBox fx:id="severityCB" layoutX="565.0" layoutY="428.0" prefHeight="32.0" prefWidth="45.0" />
+      <ChoiceBox fx:id="urgencyCB" layoutX="794.0" layoutY="428.0" prefHeight="32.0" prefWidth="45.0" />
+   </children>
+</AnchorPane>

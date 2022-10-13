@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1080.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StepThreeController">
+   <children>
+      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="59.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../FaultTracker/resources/images/nea_logo_real.png" />
+               </image>
+               </ImageView>
+      <Label layoutX="184.0" layoutY="0.0" prefHeight="122.0" prefWidth="132.0" styleClass="logo-text" text="National Environmental Agency" wrapText="true">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="184.0" layoutY="104.0" styleClass="logo-motto" text="Safeguard, Nurture, Cherish">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="600.0" layoutY="8.0" prefHeight="135.0" prefWidth="400.0" styleClass="app-text" text="Efficient Feedback  &#13;and Enquiry System" wrapText="true">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Line endX="960.0" layoutX="60.0" layoutY="140.0" />
+      <Line endX="960.0" layoutX="60.0" layoutY="212.0" />
+      <Circle fill="WHITE" layoutX="360.0" layoutY="168.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="540.0" layoutY="168.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#63A966" layoutX="720.0" layoutY="168.0" radius="16.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="356.0" layoutY="155.0" text="1">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label layoutX="536.0" layoutY="155.0" text="2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="716.0" layoutY="155.0" text="3" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="187.0" text="Case Type">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="499.0" layoutY="187.0" text="Additional Info">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="685.00" layoutY="187.0" text="Confirmation">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Button fx:id="proceedBtn" layoutX="866.0" layoutY="560.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="30.0" prefWidth="88.0" styleClass="button" text="Confirm">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+      </Button>
+      <Label layoutX="80.0" layoutY="270.0" styleClass="field-header" text="Title:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="80.0" layoutY="342.0" styleClass="field-header" text="Description:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="80.0" layoutY="234.0" styleClass="section-header" text="Confirmation of Details">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Button fx:id="backBtn" layoutX="80.0" layoutY="577.0" mnemonicParsing="false" onAction="#formBack" prefHeight="30.0" prefWidth="72.0" styleClass="button" text="Back">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/start.css" />
+         </stylesheets>
+      </Button>
+      <Label layoutX="580.0" layoutY="270.0" styleClass="field-header" text="Contact Info:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="580.0" layoutY="350.0" styleClass="field-header" text="Severity:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="580.0" layoutY="310.0" styleClass="field-header" text="Urgency:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="580.0" layoutY="390.0" styleClass="field-header" text="Location:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="580.0" layoutY="430.0" styleClass="field-header" text="Type of Report:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label fx:id="titleLbl" alignment="TOP_LEFT" layoutX="129.0" layoutY="270.0" prefHeight="57.0" prefWidth="313.0" text="Label" wrapText="true" />
+      <Label fx:id="descLbl" alignment="TOP_LEFT" layoutX="80.0" layoutY="376.0" prefHeight="169.0" prefWidth="357.0" text="Label" wrapText="true" />
+      <Label fx:id="contactLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="270.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="urgancyLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="310.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="severityLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="350.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="locationLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="390.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="typeLbl" alignment="TOP_LEFT" layoutX="700.0" layoutY="430.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+   </children>
+</AnchorPane>

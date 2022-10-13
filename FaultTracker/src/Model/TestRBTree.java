@@ -9,7 +9,7 @@ public class TestRBTree {
         System.out.println(tree);
 
         tree.delete(-2);
-        tree.delete(-9);
+
         System.out.println(tree.inOrder());
         System.out.println(tree);
     }
