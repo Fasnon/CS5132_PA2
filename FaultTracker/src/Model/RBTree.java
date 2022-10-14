@@ -28,7 +28,7 @@ public class RBTree<T extends Comparable<? super T>> {
         return inOrder(new ArrayList<>());
     }
 
-    public <C extends Collection<T>> C inOrder(C collection) {
+    public <L extends List<T>> L inOrder(L collection) {
         inOrder(root, collection);
         return collection;
     }
@@ -126,7 +126,7 @@ public class RBTree<T extends Comparable<? super T>> {
 
         else{
             Node<T> u = BSTReplace(curr);
-            boolean isTrue= ((u == null&&u.black == true)&&(curr.black==true));
+            boolean isTrue= ((u == null&u.black == true)&&(curr.black==true));
             Node<T> p = curr.neighbours[2];
             if(u == null){    //red then black or red or null
                 if(curr == root) {
@@ -389,7 +389,7 @@ public class RBTree<T extends Comparable<? super T>> {
             return new Node<>(l.get(0), level != 0);
         }
         int middle = l.size() / 2;
-        return new Node<E>(
+        return new Node<>(
                 l.get(middle), true, null,
                 constructFromSorted(l.subList(0, middle), --level),
                 constructFromSorted(l.subList(++middle, l.size()), level),
