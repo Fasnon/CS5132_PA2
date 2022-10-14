@@ -25,3 +25,6 @@ hs_err_pid*
 # lets see if this works
 .idea
 out
+
+# See how
+FaultTracker.iml
