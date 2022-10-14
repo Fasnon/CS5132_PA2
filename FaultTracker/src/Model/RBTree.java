@@ -127,7 +127,7 @@ public class RBTree<T extends Comparable<? super T>> {
 
         else{
             Node<T> u = BSTReplace(curr);
-            boolean isTrue= ((u == null||xxu.black == true)&&(curr.black==true));
+            boolean isTrue= ((u == null|| u.black)&&(curr.black));
             Node<T> p = curr.neighbours[2];
             if(u == null){    //red then black or red or null
                 if(curr == root) {
