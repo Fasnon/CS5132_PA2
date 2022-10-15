@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class Converter {
     public static DateFormat dateFormatter = SimpleDateFormat.getDateTimeInstance();
     public static String export_report(Report report) {
-        System.out.println(9303);
         return String.join(
                 "|", report.getType(), report.getTitle(), report.getDescription(),
                 report.getContact(), report.getLocation(),
@@ -30,12 +29,11 @@ public class Converter {
 
     public static String export_report_tree(RBTree<Report> tree) {
         StringBuilder result = new StringBuilder();
-        System.out.println(1923);
-        for (Node<Report> r : tree.levelOrder()) {
-            result = result.append(export_report(r.getItem()));
-            result = result.append("\n");
-        }
         try {
+            for (Node<Report> r : tree.levelOrder()) {
+                result = result.append(export_report(r.getItem()));
+                result = result.append("\n");
+            }
             return result.substring(0, result.length() - 1);
         }
         catch (Exception e){
