@@ -7,7 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="640.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StartController">
+<AnchorPane prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CaseViewController">
    <children>
       <AnchorPane fx:id="header" minHeight="202.0" minWidth="1080.0" prefHeight="139.0" prefWidth="600.0" styleClass="header-bg">
          <stylesheets>
@@ -35,15 +35,62 @@
           </Label>
          </children>
          </AnchorPane>
-      <Button fx:id="formBtn" layoutX="266.0" layoutY="516.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="32.0" prefWidth="64.0" styleClass="button" text="Back">
+      <Button fx:id="backBtn" layoutX="134.0" layoutY="601.0" mnemonicParsing="false" onAction="#backToAdmin" prefHeight="32.0" prefWidth="64.0" styleClass="button" text="Back">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>
       </Button>
-      <Button fx:id="formBtn1" layoutX="831.0" layoutY="516.0" mnemonicParsing="false" onAction="#formProceed" prefHeight="32.0" prefWidth="180.0" styleClass="quit-button" text="Mark as Resolved (Delete)">
+      <Button fx:id="deleteBtn" layoutX="830.0" layoutY="601.0" mnemonicParsing="false" onAction="#deleteReport" prefHeight="32.0" prefWidth="180.0" styleClass="quit-button" text="Mark as Resolved (Delete)">
          <stylesheets>
             <URL value="@../../../../FaultTracker/resources/styles/start.css" />
          </stylesheets>
       </Button>
+      <Label layoutX="117.0" layoutY="278.0" styleClass="field-header" text="Title:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="117.0" layoutY="350.0" styleClass="field-header" text="Description:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="117.0" layoutY="242.0" styleClass="section-header" text="Case Details">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="617.0" layoutY="278.0" styleClass="field-header" text="Contact Info:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="617.0" layoutY="358.0" styleClass="field-header" text="Severity:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="617.0" layoutY="318.0" styleClass="field-header" text="Urgency:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="617.0" layoutY="398.0" styleClass="field-header" text="Location:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label layoutX="617.0" layoutY="438.0" styleClass="field-header" text="Type of Report:">
+         <stylesheets>
+            <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
+         </stylesheets>
+      </Label>
+      <Label fx:id="titleLbl" alignment="TOP_LEFT" layoutX="166.0" layoutY="278.0" prefHeight="57.0" prefWidth="313.0" text="Label" wrapText="true" />
+      <Label fx:id="descLbl" alignment="TOP_LEFT" layoutX="117.0" layoutY="384.0" prefHeight="169.0" prefWidth="357.0" text="Label" wrapText="true" />
+      <Label fx:id="contactLbl" alignment="TOP_LEFT" layoutX="737.0" layoutY="278.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="urgencyLbl" alignment="TOP_LEFT" layoutX="737.0" layoutY="318.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="severityLbl" alignment="TOP_LEFT" layoutX="737.0" layoutY="358.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="locationLbl" alignment="TOP_LEFT" layoutX="737.0" layoutY="398.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
+      <Label fx:id="typeLbl" alignment="TOP_LEFT" layoutX="737.0" layoutY="438.0" prefHeight="17.0" prefWidth="237.0" text="Label" wrapText="true" />
    </children>
 </AnchorPane>

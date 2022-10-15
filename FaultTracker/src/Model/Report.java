@@ -82,7 +82,7 @@ public class Report implements Comparable<Report> {
         int c;
         if ((c = Integer.compare(urgency, o.urgency)) == 0) {
             if ((c = Integer.compare(severity, o.severity)) == 0) {
-                return date.compareTo(o.date);
+                return o.date.compareTo(date);
             }
         }
         return c;

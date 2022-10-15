@@ -18,6 +18,11 @@ public class RBTree<T extends Comparable<? super T>> {
         }
     }
 
+    public Node<T> getRoot() {
+        return root;
+    }
+
+
     public RBTree(T[] items) {
         for (T item : items) {
             insert(item);
@@ -410,6 +415,7 @@ public class RBTree<T extends Comparable<? super T>> {
         ArrayList<Node<T>> result = new ArrayList<>();
         Queue<Node<T>> level = new LinkedList<>();
         level.add(root);
+        result.add(root);
         while (level.size() > 0) {
             int level_size = level.size();
             for (int i = 0; i < level_size; i++) {

@@ -96,7 +96,7 @@
             <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
          </stylesheets>
       </Label>
-      <TextArea fx:id="descTA" layoutX="70.0" layoutY="335.0" prefHeight="205.0" prefWidth="400.0" styleClass="text-area">
+      <TextArea fx:id="descTA" layoutX="70.0" layoutY="335.0" prefHeight="205.0" prefWidth="400.0" styleClass="text-area" wrapText="true">
             <stylesheets>
                 <URL value="@../../../../FaultTracker/resources/styles/steps.css" />
             </stylesheets>

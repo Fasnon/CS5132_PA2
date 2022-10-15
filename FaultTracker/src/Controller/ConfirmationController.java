@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.RBTree;
+import Model.Report;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,6 +13,7 @@ import javafx.stage.Stage;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Objects;
 
 public class ConfirmationController {
@@ -23,12 +26,16 @@ public class ConfirmationController {
 
     @FXML
     private Label dateLbl;
+    private HashMap<String, RBTree<Report>> treeMap;
 
 
     @FXML
     void backToHome(ActionEvent event)  throws Exception {
         Stage primaryStage = (Stage) homeBtn.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/View/Start.fxml")));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/Start.fxml"));
+        Parent newRoot = loader.load();
+        StartController sc = loader.getController();
+        sc.initData(treeMap);
         primaryStage.getScene().setRoot(newRoot);
     }
 
@@ -37,9 +44,11 @@ public class ConfirmationController {
         Platform.exit();
     }
 
-    void initData(Date d){
+    void initData(Date d, HashMap<String, RBTree<Report>> t){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         dateLbl.setText("at " + sdf.format(d));
+        this.treeMap = t;
+
     }
 
 }

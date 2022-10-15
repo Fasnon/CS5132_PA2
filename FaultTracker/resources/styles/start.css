@@ -88,3 +88,7 @@
     -fx-font-family: "Arimo Medium";
     -fx-font-size: 15;
 }
+
+.no-style-btn{
+    -fx-base: -fx-default-button ;
+}

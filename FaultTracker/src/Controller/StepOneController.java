@@ -1,5 +1,7 @@
 package Controller;
 
+import Model.RBTree;
+import Model.Report;
 import View.StepOneListener;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +17,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -35,22 +38,31 @@ public class StepOneController implements Initializable {
     private StepOneListener stepOneListener;
     private ArrayList<CaseTypeCardController> cards;
 
+    private HashMap<String, RBTree<Report>> treeMap;
+
+    public void initData(HashMap<String, RBTree<Report>> treeMap){
+        this.treeMap = treeMap;
+    }
+
     @FXML
     void formBack(ActionEvent event) throws Exception {
         Stage primaryStage = (Stage) backBtn.getScene().getWindow();
-        Parent newRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/View/Start.fxml")));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/Start.fxml"));
+        Parent newRoot = loader.load();
+        StartController sc = loader.getController();
+        sc.initData(treeMap);
         primaryStage.getScene().setRoot(newRoot);
     }
 
     @FXML
     void formProceed(ActionEvent event) throws Exception{
-        if (selectedType != "nil") {
+        if (!Objects.equals(selectedType, "nil")) {
             Stage primaryStage = (Stage) backBtn.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/StepTwo.fxml"));
 //            Parent newRoot = FXMLLoader.load(Objects.requireNonNull());
             primaryStage.getScene().setRoot(loader.load());
             StepTwoController controller = loader.getController();
-            controller.initData(selectedType);
+            controller.initData(selectedType, treeMap);
 //            primaryStage.setUserData(selectedType);
         }
         else{
@@ -65,8 +77,8 @@ public class StepOneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            ArrayList<String> types = new ArrayList<>();
             cards = new ArrayList<CaseTypeCardController>();
+            ArrayList<String> types = new ArrayList<>();
             types.add("Compliments");
             types.add("Smoking");
             types.add("Rodents");

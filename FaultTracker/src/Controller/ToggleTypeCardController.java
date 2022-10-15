@@ -68,45 +68,35 @@ public class ToggleTypeCardController {
         this.type = type;
         this.toggleListener = tl;
         typeLbl.setText(type);
+        File s = new File("FaultTracker/resources/images/type_" + type.toLowerCase() + ".png");
+        typeImg.setImage(new Image(s.toURI().toString()));;
         switch (type){
             case "Compliments": {
-                File s = new File("FaultTracker/resources/images/type_compliments.png");
-                typeImg.setImage(new Image(s.toURI().toString()));;
                 anchorPane.setStyle("-fx-background-color: \"CECECE\"; -fx-background-radius: 20;");
                 colour = "81C2D7";
                 break;
             }
             case "Littering": {
-                File s = new File("FaultTracker/resources/images/type_littering.png");
-                typeImg.setImage(new Image(s.toURI().toString()));
                 anchorPane.setStyle("-fx-background-color: \"CECECE\"; -fx-background-radius: 20;");
                 colour = "81D089";
                 break;
             }
             case "Mosquitoes": {
-                File s = new File("FaultTracker/resources/images/type_mosquitoes.png");
-                typeImg.setImage(new Image(s.toURI().toString()));
                 anchorPane.setStyle("-fx-background-color: \"CECECE\"; -fx-background-radius: 20;");
                 colour = "CDAF99";
                 break;
             }
             case "Others": {
-                File s = new File("FaultTracker/resources/images/type_others.png");
-                typeImg.setImage(new Image(s.toURI().toString()));
                 anchorPane.setStyle("-fx-background-color: \"CECECE\"; -fx-background-radius: 20;");
                 colour = "E08686";
                 break;
             }
             case "Rodents": {
-                File s = new File("FaultTracker/resources/images/type_rodents.png");
-                typeImg.setImage(new Image(s.toURI().toString()));
                 colour = "D8A2D9";
                 anchorPane.setStyle("-fx-background-color: \"CECECE\"; -fx-background-radius: 20;");
                 break;
             }
             case "Smoking": {
-                File s = new File("FaultTracker/resources/images/type_smoking.png");
-                typeImg.setImage(new Image(s.toURI().toString()));
                 colour = "676767";
                 anchorPane.setStyle("-fx-background-color: \"CECECE\"; -fx-background-radius: 20;");
                 break;

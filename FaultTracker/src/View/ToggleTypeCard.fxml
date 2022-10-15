@@ -3,10 +3,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="120.0" prefWidth="112.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToggleTypeCardController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#click" prefHeight="96.0" prefWidth="84.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToggleTypeCardController">
    <children>
-      <ImageView fx:id="typeImg" fitHeight="64.0" fitWidth="64.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="typeLbl" alignment="CENTER" layoutY="88.0" prefHeight="17.0" prefWidth="112.0" text="Report Type" />
+      <ImageView fx:id="typeImg" fitHeight="48.0" fitWidth="48.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="typeLbl" alignment="CENTER" layoutY="70.0" prefHeight="17.0" prefWidth="84.0" text="Report Type">
+         <font>
+            <Font size="11.0" />
+         </font></Label>
    </children>
 </AnchorPane>
